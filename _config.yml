@@ -2,9 +2,11 @@
 # Site settings
 # -----------------------------------------------------------------------------
 name: Solomon Messing
-email: you@example.com
+email: firstname.lastname@gmail.com
 description: > # this means to ignore newlines until "url:"
-  La di da.
+  Research Scientist. Manager of data science for Social Science One at 
+  Facebook, former (founding) Director at Pew Research Center’s Data Labs.
+
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -18,20 +20,21 @@ last_updated: # leave blank if you don't want to display last updated
 # Social integration
 # -----------------------------------------------------------------------------
 github_username: SolomonMg # your GitHub user name
-twitter_username: # your Twitter handle
-linkedin_username: # your LinkedIn user name
-scholar_userid: # your Google Scholar ID
+twitter_username: SolomonMg # your Twitter handle
+linkedin_username: solomonmg # your LinkedIn user name
+scholar_userid: to63kiAAAAAJ # your Google Scholar ID
 orcid_id: # your ORCID ID
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Email is the best way to reach me, but you'll have to prove you're human by 
+  manually filling in my first and last name.
 
-google_analytics: UA-XXXXXXXXX # out your google-analytics code
+google_analytics: UA-27273977-1 # out your google-analytics code
 
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
-blog_name: later
-blog_description: a simple whitespace theme for academics
+blog_name: blog
+blog_description: all things data, science, and visualization
 
 # Pagination
 paginate: 4
@@ -44,7 +47,7 @@ text:
     older: 'Older'
 
 # Comments
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: solomonmessing # put your disqus shortname
 
 # Optional features
 show_social_icons:  false
@@ -84,6 +87,18 @@ plugins:
     - jekyll-paginate
     - jekyll/scholar
     - jemoji
+    - jekyll-twitter-plugin
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: r
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
 
 # Jekyll-Scholar
 scholar:
