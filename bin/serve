@@ -1,6 +1,6 @@
 git add _pages/*
 git add _posts/*
 git add assets/img/*
-cp ~/Dropbox/CV/CV.pdf assets/CV.pdf
+cp ~/Dropbox/CV/CV.pdf assets/img/CV.pdf
 git commit -a -m "cv copy"
 bundle exec jekyll serve
