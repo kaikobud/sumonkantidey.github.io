@@ -7,7 +7,7 @@ Do you remember the night of Nov 8, 2016? I was glued to election coverage and o
 
 When she lost, [many on both sides of the aisle](https://www.nytimes.com/2016/11/10/us/politics/donald-trump-election-reaction.html) were shocked. My co-authors and I wondered if America's seeming confidence in a Clinton victory wasn’t driven in part by increasing coverage of probabilistic forecasts. And, if a Clinton victory looked inevitable, what did that do to turnout?
 
-![forecast_google_news](/assets/img/forecast_google_news.png) 
+![](/assets/img/forecast_google_news.png) 
 
 
 We weren't alone. Clinton herself was quoted in [New York Magazine](http://nymag.com/daily/intelligencer/2017/05/hillary-clinton-life-after-election.html?mid=nymag_press) after the election:
@@ -40,7 +40,7 @@ Our headline isn’t about accuracy, it’s about _confusion_. And the evidence 
 
 2\. Figure 2B (Study 1) shows that people get their candidate’s likelihood of winning very wrong, even when we explicitly told them the probability a candidate will win. It’s true that they got slightly closer with a probability forecast, but they are still far off.
 
-![fig2bstudy1](/assets/img/likelihood_loess.png)
+![normal](/assets/img/likelihood_loess.png)
 
 Why might this be? A lot of past research and evidence suggests that people have trouble understanding probabilities, as noted at the end of the podcast. People have a tendency to think about [probabilities in subjective terms](https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1384&context=law_and_economics), so they have trouble understanding [medical risks](https://www.ncbi.nlm.nih.gov/pubmed/26161749) and even [weather forecasts](http://pubman.mpdl.mpg.de/pubman/item/escidoc:2101059/component/escidoc:2101058/GG_30_Chance_2005.pdf).
 
@@ -52,7 +52,7 @@ As the podcast hosts pointed out, people _underestimated_ the true likelihood of
 
 But we know from past research that people have a “[wishful](http://journals.sagepub.com/doi/abs/10.1177/0956797609356421) [thinking](http://www.tandfonline.com/doi/abs/10.1207/s15324834basp1304_6)” [bias](https://academic.oup.com/ijpor/article-abstract/9/2/105/713900), meaning they say their candidate is doing better than polling data suggests. That’s why there’s a positive bias when people are evaluating how their candidate will do, according to Figure 2A (Study 1).
 
-![votea](/assets/img/votea.png)
+![normal](/assets/img/votea.png)
 
 The pattern in the data suggest that people are more accurate after seeing a probabilistic forecast for a losing candidate because of this effect, and _not_ necessarily because they better understand that candidate’s actual chances of victory.
 
@@ -68,7 +68,7 @@ At the end of the day, it’s easy to see that a vote share projection of 55% me
 
 And most critically, we show that probabilistic forecasts showing more of a blowout could potentially lower voting. In Study 1, we provide limited evidence of this based on self reports. In Study 2, we show that when participants are faced with incentives designed to simulate real world voting, they are less likely to vote when probabilistic forecasts show higher odds of one candidate winning. Yet they are not responsive to changes in vote share.
 
-![](/assets/img/FT_18.01.03_prob_vote.png)
+![normal](/assets/img/FT_18.01.03_prob_vote.png)
 
 **What’s with our mapping between vote share and probability?**
 
@@ -120,23 +120,26 @@ This matters _a lot more_ if one candidate’s potential voters are differential
 
 1\. Figure 2C in Study 1 suggests that the _candidate who is ahead_ in the polls will be more affected by the increased certainty that probabilistic forecasts convey.
 
-<figure class="graf graf--figure">![](https://cdn-images-1.medium.com/max/1600/0*J57CkqZqLsnqwN2m.)</figure>
+![normal](/assets/img/certaintyc.png)
+
 
 2\. When you look at the balance of coverage of probabilistic forecasts on major television broadcasts, there is more coverage on MSNBC, which has a more liberal audience.
 
-<figure class="graf graf--figure">![](https://cdn-images-1.medium.com/max/1600/0*8Xds3_Ymo7qqlz6t.)</figure>
+![half](/assets/img/msnbc_mentions.png)
 
 3\. Consider who shares this material in social media--specifically the average self-reported ideology of people who share links to various sites hosting poll-aggregators on Facebook, data that come from [this paper](http://science.sciencemag.org/content/early/2015/05/06/science.aaa1160.full)’s [replication materials](http://dx.doi.org/10.7910/DVN/LDJ7MS). The websites that present their results in terms of probabilities have left-leaning (negative) social media audiences. Only realclearpolitics.com, which doesn’t emphasize win-probabilities, has a conservative audience:
 
-<figure class="graf graf--figure">![](https://cdn-images-1.medium.com/max/1600/0*uimvBJwxL58cT0Bz.)</figure>
+![half](/assets/img/bma_science_alignment.png)
 
 4\. In 2016, the proportion of American National Election Study (ANES) respondents who thought the leading candidate would “win by quite a bit” was unusually high for Democrats...
 
-![anes_turnout_closerace_MC_tall](https://solomonmessing.files.wordpress.com/2018/02/anes_turnout_closerace_mc_tall.png)
+![normal](/assets/img/anes_turnout_closerace_mc_tall.png)
+
 
 5\. And we know that people who say the leading presidential candidate will “win by quite a bit” in pre-election polling are about three percentage points less likely to report voting shortly after the election than people who say it’s a close race — and that’s after conditioning on election year, prior turnout, and party identification. The data here are from the ANES and go back to 1952.
 
-<figure class="graf graf--figure">![](https://cdn-images-1.medium.com/max/1600/0*FjVSUBV_ZjR9iymz.)</figure>
+![normal](/assets/img/closerace_vote_anes.png)
+
 
 These data do not conclusively show that probabilistic forecasts affected turnout in the 2016 election, but they do raise questions about the real world consequences of probabilistic forecasts.
 
