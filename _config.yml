@@ -34,7 +34,7 @@ google_analytics: UA-27273977-1 # out your google-analytics code
 # Blog
 # -----------------------------------------------------------------------------
 blog_name: blog
-blog_description: all things data, science, and visualization
+blog_description: Thoughts on data visualization, analysis, & scientific research.
 
 # Pagination
 paginate: 4
