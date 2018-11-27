@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Response to FiveThirtyEight’s Podcast about our paper, “Projecting confidence”
-image: forecast_google_news.png
+title: Response to FiveThirtyEight’s Podcast
+image: anes_turnout_closerace_mc_tall.png
 ---
 Do you remember the night of Nov 8, 2016? I was glued to election coverage and obsessively checking probabilistic forecasts, wondering whether Clinton might do _so well_ that she’d win in places like my home state of Arizona. Although FiveThirtyEight had Clinton's chances at beating Trump at around 70%, most other forecasters had her at around 90%.
 
