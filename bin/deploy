@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# custom: 
+git add _pages/*
+git add _posts/*
+git add assets/img/*
+cp ~/Dropbox/CV/CV.pdf assets/CV.pdf
+
 # Run this script to deploy the app to Github Pages
 
 # Parse cmd arguments
