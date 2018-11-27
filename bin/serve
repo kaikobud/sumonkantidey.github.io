@@ -1,0 +1,5 @@
+git add _pages/*
+git add _posts/*
+git add assets/img/*
+cp ~/Dropbox/CV/CV.pdf assets/CV.pdf
+bundle exec jekyll serve
