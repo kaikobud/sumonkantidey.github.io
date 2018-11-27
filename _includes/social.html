@@ -1,4 +1,5 @@
 <div class="social">
+  <h2>Contact</h2>
   <span class="contacticon center">
     <a href="mailto:{{ site.email | encode_email }}"><i class="fas fa-envelope"></i></a>
     {% if site.orcid_id %}<a href="https://orcid.org/{{ site.orcid_id }}" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
@@ -12,6 +13,11 @@
   <div class="col three caption">
     {{ site.contact_note }}
   </div>
+
+
+<p></p>
+<hr>
+
 
   <div class="twitter">
 {% twitter https://twitter.com/solomonmg maxwidth=500 limit=5 %}
