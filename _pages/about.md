@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: <strong>Solomon</strong> Messing
-description: Research Scientist/project lead, Facebook Core Data Science.
+description: Research Scientist/Data Science Manager, Facebook Core Data Science.
 
 profile:
   align: right
