@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Ideologically diverse news' commentary and an agenda for future research
-image: anes_turnout_closerace_mc_tall.png
+title: Ideologically diverse news, an agenda for future research
+image: 5a469dbbfb5b2916a87554ca4a247579da11e2b2.png
 ---
 
 ### Eytan Bakshy & Solomon Messing
@@ -26,21 +26,63 @@ We\'d like to help other researchers looking to study other populations understa
 It\'s also informative to examine the proportion of those users who provide identifiable profile affiliations conditional on demographics and Facebook usage:
 
 
-  ----------------
 
-    **Age**
-    18-24
-    25-44
-    45-64
-    65+
-    **Gender**
-    Female
-    Male
-    **Login Days**
-    105-140
-    140-185
-  ----------------
-
+<table style="border-collapse:collapse;width:473px;height:512px;" border="0" width="174" cellspacing="0" cellpadding="0"><colgroup> <col style="width:65pt;" span="2" width="87" /> </colgroup>
+<tbody>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;width:65pt;" width="87" height="24"><strong>Age</strong></td>
+<td class="xl63" style="width:65pt;" width="87"><strong>Percent reporting ideological affiliation</strong></td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">18-24</td>
+<td class="xl64">21.60%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">25-44</td>
+<td class="xl64">28.50%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">45-64</td>
+<td class="xl64">24.30%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">65+</td>
+<td class="xl64">21.40%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24"></td>
+<td class="xl63"></td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24"><strong>Gender</strong></td>
+<td class="xl63"><strong>Percent reporting ideological affiliation</strong></td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">Female</td>
+<td class="xl64">21.90%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">Male</td>
+<td class="xl64">30.60%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24"></td>
+<td class="xl63"></td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24"><strong>Login Days</strong></td>
+<td class="xl63"><strong>Percent reporting ideological affiliation</strong></td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">105-140</td>
+<td class="xl64">18.90%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">140-185</td>
+<td class="xl64">26.70%</td>
+</tr>
+</tbody>
+</table>
 
 
 Clearly those who report an ideology in their profile tend to be more active on Facebook. They are also more likely to be men, which is consistent with the well-documented gender gap in American politics ([Box-Steffensmeier 2004](http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=245226&fileId=S0003055404001315)).

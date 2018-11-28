@@ -7,11 +7,7 @@ description: > # this means to ignore newlines until "url:"
   Research Scientist. Manager of data science for Social Science One at 
   Facebook, former (founding) Director at Pew Research Center’s Data Labs.
 
-footer_text: >
-  Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-
+footer_text: # text at the bottom of the page
 url: # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
 last_updated: # leave blank if you don't want to display last updated
@@ -25,8 +21,7 @@ linkedin_username: solomonmg # your LinkedIn user name
 scholar_userid: to63kiAAAAAJ # your Google Scholar ID
 orcid_id: # your ORCID ID
 contact_note: >
-  Email is the best way to reach me, but you'll have to prove you're human by 
-  manually filling in my first and last name.
+  Email is the best way to reach me, but you'll have to prove you're human :)
 
 google_analytics: UA-27273977-1 # out your google-analytics code
 

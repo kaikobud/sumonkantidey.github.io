@@ -8,8 +8,7 @@ profile:
   align: right
   image: ProfilePic.jpg
   address: >
-    <p>Washington, DC</p>
-
+    
 news: true
 social: true
 ---
