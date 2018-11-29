@@ -2,6 +2,7 @@
 layout: post
 title: Using Scatterplots and Models to Understand the Diamond Market
 image: fbfa61f67413c8e2805c507a14b38c24c5373265.png
+comments: true
 ---
 
 ![ggpairs](/assets/img/fbfa61f67413c8e2805c507a14b38c24c5373265.png)
@@ -372,3 +373,27 @@ Don't make that mistake.
 That concludes part I of this series on scatterplots.  Part II will illustrate the advantages of using facets/panels/small multiples, and show how tools to fit trendlines including linear regression and local regression (loess) can help yield additional insight about your data. 
 
 You can also learn more about [exploratory data analysis via this Udacity course taught by my colleagues Dean Eckles and Moira Burke, and Chris Saden](https://www.udacity.com/course/ud651), which will be coming out in the next few weeks.
+
+{% if page.comments %} 
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://solomonmg-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %} 
+
