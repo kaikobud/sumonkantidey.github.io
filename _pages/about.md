@@ -1,7 +1,7 @@
 ---
 layout: about
 permalink: /
-title: <strong>Solomon</strong> Messing
+title: <strong>Solomon Messing</strong>
 description: Research Scientist/Data Science Manager, Facebook Core Data Science.
 
 profile:
