@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using Scatterplots and Models to Understand the Diamond Market
-image: anes_turnout_closerace_mc_tall.png
+image: fbfa61f67413c8e2805c507a14b38c24c5373265.png
 ---
 
 ![ggpairs](/assets/img/fbfa61f67413c8e2805c507a14b38c24c5373265.png)
