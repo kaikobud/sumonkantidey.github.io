@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Out for Justice
-description: ML & decision support to optimize patrols
-img: /assets/img/OutForJustice.png
+title: Projecting Confidence
+description: How the Probabilistic Horse Race Demobilizes the Public
+img: /assets/img/anes_turnout_closerace_mc_tall.png
 ---
 
 <iframe src="https://player.vimeo.com/video/111994655" width="640" height="330" frameborder="0" allowfullscreen></iframe>
