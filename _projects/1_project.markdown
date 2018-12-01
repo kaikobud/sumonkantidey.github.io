@@ -62,11 +62,11 @@ Researchers consistently find robust correlations between tighter elections and 
 Field experiments provide additional evidence that perceptions of higher electoral competition increases turnout. This work finds substantive effects on turnout when polling results showing a closer race are delivered via telephone [among those who were reached, {% cite biggers2017experimental %}] but null results when relying on postcards to deliver closeness messages [for which it’s not possible to verify the treatment was actually read, {% cite gerber2017one %}; {% cite biggers2017experimental%}. Finally, one study conducted in the weeks leading up to the 2012 presidential election found higher rates of self-reported, post-election turnout when delivering ostensible polling results showing Obama neck-and-neck with Romney [which was not consistent with the extant polling data showing a comfortable Obama lead, {% cite Vannette:2014vk %}].
 
 
+**Media coverage**
+[Washington Post](https://www.washingtonpost.com/news/politics/wp/2018/02/06/clintons-achilles-heel-in-2016-may-have-been-overconfidence/?utm_term=.619133ce9312), [FiveThirthyEight’s Politics Podcast](https://fivethirtyeight.com/features/politics-podcast-whats-so-wrong-with-nancy-pelosi/), [New York Magazine](http://nymag.com/intelligencer/2018/02/americans-dont-understand-election-probabilities.html?gtm=bottom&gtm=bottom), [Political Wire](https://politicalwire.com/2018/02/06/election-forecasts-lower-voter-turnout/).
 
-- Media coverage: [Washington Post](https://www.washingtonpost.com/news/politics/wp/2018/02/06/clintons-achilles-heel-in-2016-may-have-been-overconfidence/?utm_term=.619133ce9312), [FiveThirthyEight’s Politics Podcast](https://fivethirtyeight.com/features/politics-podcast-whats-so-wrong-with-nancy-pelosi/), [New York Magazine](http://nymag.com/intelligencer/2018/02/americans-dont-understand-election-probabilities.html?gtm=bottom&gtm=bottom), [Political Wire](https://politicalwire.com/2018/02/06/election-forecasts-lower-voter-turnout/).
 
-
-
+**References**
 {% bibliography --cited %}
 
 
