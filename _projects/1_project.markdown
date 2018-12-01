@@ -11,6 +11,12 @@ Clinton herself was quoted in [New York Magazine](http://nymag.com/daily/intelli
 
 > I had people literally seeking absolution... ‘_I’m so sorry I didn’t vote. I didn’t think you needed me._’ I don’t know how we’ll ever calculate how many people thought it was in the bag, because the percentages kept being thrown at people — ‘_Oh, she has an 88 percent chance to win!_’
 
+In 2016 there was significantly more media covrerage of probablistic forecasts than in past election cycles: 
+
+![](/assets/img/forecast_google_news.png) 
+(Number of articles mentioning probabilistic forecasts indexed by Google News.)
+
+
 Our work shows that probablistic election forecasts make a race look less competitive. Participants in a national probability survey-experiment were substantially more certain that one candidate would win a hypothetical race after seeing a probablistic forecast than after seeing the equivalent vote share estimate and margin of error. This is a big effect---those are confidence intervals not standard errors, with p-values below $$10^{-11}$$. 
 
 ![normal](/assets/img/certaintyc.png)
@@ -50,20 +56,12 @@ The data here are from the [American National Election Study (ANES)](https://ele
 
 
 
-Past work indicates that *uncertainty* in perceived pivotality affects turnout. Some of the best evidence comes from work that analyzes the effects of releasing exit polling results before voting ends, which clearly removes uncertainty. Work examining the effects of East Coast television networks’ “early calls” for one candidate or another on West Coast turnout generally find small but substantively meaningful effects, despite the fact that these calls occur late on election day {% cite carpini1984scooping %}. Similar work exploiting voting reform as a natural experiment shows a full 12 percentage point decrease in turnout in the French overseas territories that voted after exit polls were released [@Morton201565]. These designs also isolate the effect of information about closeness from campaigns’ tendencies to invest more in campaigns in competitive districts.
+Past work indicates that *uncertainty* in perceived pivotality affects turnout. Some of the best evidence comes from work that analyzes the effects of releasing exit polling results before voting ends, which clearly removes uncertainty. Work examining the effects of East Coast television networks’ “early calls” for one candidate or another on West Coast turnout generally find small but substantively meaningful effects, despite the fact that these calls occur late on election day {% cite carpini1984scooping %} , {% Sudman:1986wu %} . Similar work exploiting voting reform as a natural experiment shows a full 12 percentage point decrease in turnout in the French overseas territories that voted after exit polls were released {% Morton201565 %}. These designs also isolate the effect of information about closeness from campaigns’ tendencies to invest more in campaigns in competitive districts.
 
-Other aggregate level studies find similar patterns consistent with a relationship between uncertainty and turnout. First of all, a large literature has demonstrated robust correlations between tighter elections and higher turnout [see @geys2006explaining; @cancela2016explaining for reviews]. Furthermore, @nicholson1997prior provide evidence from statistical models that prior election returns also explain turnout above and beyond campaign spending, particularly when good polling data is unavailable. With ANES data we show that from 1952-2016, people who said that one candidate will “win by quite a bit” in pre-election polling were less likely to vote, even after conditioning on prior turnout, year, party, and actual electoral college and popular vote margin (see Table A2 and Figure A3).
+Other aggregate level studies find similar patterns consistent with a relationship between uncertainty and turnout. First of all, a large literature has demonstrated robust correlations between tighter elections and higher turnout [see {% geys2006explaining %}; {% cancela2016explaining %} for reviews]. Furthermore, {% nicholson1997prior %} provide evidence from statistical models that prior election returns also explain turnout above and beyond campaign spending, particularly when good polling data is unavailable. 
 
-Field experiments provide additional evidence of a causal effect of how confidence in perceptions of electoral closeness can affect turnout. This literature finds substantive effects on turnout when polling results showing a closer race are delivered via telephone [among those who were reached, @biggers2017experimental] but null results when relying on postcards to deliver closeness messages [for which it’s not possible to verify the treatment was actually read, @gerber2017one; @biggers2017experimental].[^7] Finally, one study conducted in the weeks leading up to the 2012 presidential election found higher rates of self-reported, post-election turnout when delivering ostensible polling results *less* consistent with the extant polling data showing a comfortable Obama lead [@Vannette:2014vk].
+Field experiments provide additional evidence of a causal effect of how confidence in perceptions of electoral closeness can affect turnout. This literature finds substantive effects on turnout when polling results showing a closer race are delivered via telephone [among those who were reached, {% biggers2017experimental %}] but null results when relying on postcards to deliver closeness messages [for which it’s not possible to verify the treatment was actually read, {% gerber2017one %}; {% biggers2017experimental%}. Finally, one study conducted in the weeks leading up to the 2012 presidential election found higher rates of self-reported, post-election turnout when delivering ostensible polling results *less* consistent with the extant polling data showing a comfortable Obama lead [{% Vannette:2014vk %}].
 
-
-A lot of past [research](https://huber.research.yale.edu/materials/67_paper.pdf) [shows](http://www2.gsu.edu/~polsnn/priorbeliefs.pdf) that when people [think](https://www.jstor.org/stable/1953324?seq=1#page_scan_tab_contents) an election is [in the bag](https://repository.upenn.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=1018&context=asc_papers), they tend to [vote in real-world elections](https://www.sciencedirect.com/science/article/pii/S0014292115000483) at [lower rates](https://www.jstor.org/stable/2748722?seq=1#page_scan_tab_contents). Our study provides evidence that probabilistic forecasts give people more confidence that one candidate will win and suggestive evidence that we should expect them to vote at lower rates after seeing probabilistic forecasts.
-
-Consider what else was different in 2016---there was much more material covering probablistic forecasts: 
-
-
-![](/assets/img/forecast_google_news.png) 
-Number of articles mentioning probabilistic forecasts indexed by Google News.
 
 This research shows that election forecasts can make a race look less competitive and decrease voting. 
 This is not merely academic because on balance liberals are more likely to see election forecasts.  
