@@ -1,0 +1,7 @@
+cp ~/Dropbox/CV/CV.pdf assets/pdf/CV.pdf
+git add _pages/*
+git add _posts/*
+git add _projects/*
+git add assets/img/*
+git add assets/pdf/*
+git commit -a -m "$1"
