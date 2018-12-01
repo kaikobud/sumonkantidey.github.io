@@ -5,61 +5,78 @@ description: How the Probabilistic Horse Race Demobilizes the Public
 img: /assets/img/anes_turnout_closerace_mc_tall.png
 ---
 
-<iframe src="https://player.vimeo.com/video/111994655" width="640" height="330" frameborder="0" allowfullscreen></iframe>
-(forked from the team's original writeup [here](http://seanjtaylor.github.io/out-for-justice/))
+Inspired by Donald Trump's shocking victory over Hillary Clinton in the 2016 general election, Sean Westwood, Yphtach Lelkes and I set out to interrogate the question of whether elecion forecasts---particularly probablistic forecasts---might have helped to create a false sense of confidence in a Clinton victory, and ultimately led many on the left to stay home on election day. 
 
-We build Out for Justice in 24 hours at the [Bayes Impact](http://www.bayesimpact.org/) Hackathon, using data from the San Francisco Police Department. Out For Justice is an an interpretable, customizable and interactive decision support system to help SFPD optimize police patrols. Out for Justice allows the user to set their own objectives and isn't simply a black box algorithm that outputs a solution.
+Clinton herself was quoted in [New York Magazine](http://nymag.com/daily/intelligencer/2017/05/hillary-clinton-life-after-election.html?mid=nymag_press) after the election:
 
-The idea is simple: minimize response time to crime--or 911 at least calls. But different kinds of crime happen in different places in San Francisco. And police cars/patrols are a limited resource. 
+> I had people literally seeking absolution... ‘_I’m so sorry I didn’t vote. I didn’t think you needed me._’ I don’t know how we’ll ever calculate how many people thought it was in the bag, because the percentages kept being thrown at people — ‘_Oh, she has an 88 percent chance to win!_’
 
-Out for Justice allows the user to evaluate potential positions for patrol cars--if someone calls in a violent crime and my cars were set up like this, how long would it take to respond? It allows you to prioritize your response to different types of crimes using custom weights. Responding a minute later to investigate a broken window may be much less costly than arriving late on the scene of a crime in progress.
+Our work shows that probablistic election forecasts make a race look less competitive. Participants in a national probability survey-experiment were substantially more certain that one candidate would win a hypothetical race after seeing a probablistic forecast than after seeing the equivalent vote share estimate and margin of error. This is a big effect---those are confidence intervals not standard errors, with p-values below $$10^{-11}$$. 
 
-Finally, Out for Justice allows users to set car positions. Based on the custom weights and number of patrol cars, Out for Justice optimizes patrol car placement using an algorithm we call MetroPolice-Hastings. 
+![normal](/assets/img/certaintyc.png)
 
-**HOW DOES IT WORK?**
+**Why might the left be more affected?**
+ 
+Consider the figure above---the _candidate who is ahead in the polls_ is more affected. In 2016, that was Hillary. 
 
-Out for Justice is made of three components. First, we science some data. We take two years of SFPD 911 call data and use it to predict where future 911 calls are likely to come from. Second, real map data from Open Street Maps is used to simulate travel times from SF patrol cars to a call. Second, we optimize stuff. We take map data from Open Street Maps and use it to simulate travel times from SF patrol cars to a call. Finally, a simple interface makes interacting and drawing insights from Out for Justice easy.
+But irrespective of 2016, when you look at who engages with this material in both social media and television media, it's outlets with a left-leaning audience. The websites that present their poll aggregation results in terms of probabilities have left-leaning (negative) social media audiences---only realclearpolitics.com, which doesn’t emphasize win-probabilities, has a conservative audience:
 
-**BOOSTING FOR JUSTICE**
+![half](/assets/img/bma_science_alignment.png)
 
-The beating heart of Out for Justice is some machine learning. We took a data set of two years of 911 calls in San Francisco that had attached latitude/longitude coordinates, discretized the city into a grid and trained boosted Poisson regression trees to predict the probability of a 911 call at each position. This makes some strong assumptions about the underlying process that are wrong, but hey, it's still useful and we only had 24 hours! After we trained the trees they could, in principle, predict at any latitude/longitude location in SF so we predicted Poisson arrival rates for every node in street graph that we built using Open Street Maps.
+These data come from the average self-reported ideology of people who share links to various sites hosting poll-aggregators on Facebook, data that come from [this paper](http://science.sciencemag.org/content/early/2015/05/06/science.aaa1160.full)’s [replication materials](http://dx.doi.org/10.7910/DVN/LDJ7MS). 
 
-We tried several other approaches including 2d kernel density smoothing but found that the boosted trees were by far the best performing. We used the R package gbm to do the training.
+When you look at the balance of coverage of probabilistic forecasts on major television broadcasts, there is more coverage on MSNBC, which has a more liberal audience.
 
-For the initial project we focused on predicting three broad categories of crime: violent crimes (assaults, arson and forcible sex offenses), property crimes (burglary, vandalism, larceny and vehicle theft) and substance-based crimes (drunkeness or drug/narcotic). Our exploratory analyses also told us that it was a good idea to split the data by time into 3 epochs: nighttime (2AM-10AM), day time (10AM-6PM) and evening time aka party time (6PM-2AM).
-
-Our analyses find some interesting patterns in the data. All the plots are done using the excellent R package ggmaps. There are definitely weekend/weekday patterns as well as daily cycles in the day (see below). The models and data are up in the GitHub directory above if you want to play with them!
-
-![](/assets/img/predcrimes.jpg)
-
-**COMPUTING THE COSTS**
-
-So now we have probabilities of calls occuring at each node of the graph that is San Francisco. We can now take a set of patrol cars located at various points in the graph and calculate a score for that position, the score we use in the current version is an expected travel time given the way that calls are expected to come in both spatially (where does the call come from?) and temporally (how likely is a particular type of call?). The key innovation is the ability for the user to specify in the UI which types of calls are really important to respond to quickly and which ones are the kind where a minute's delay may not hurt things very much.
-
-The current beta version only allows for random initial placements of a user-specified number of patrol cars, the easiest next feature to add is the ability to place the cars manually.
+![half](/assets/img/msnbc_mentions.png)
 
 
-**METROPOLICE-HASTINGS OPTIMIZATION**
+**What about voting?**
 
-<img style="float: right;" src="/assets/img/napkin.jpg" width="250">
-The final core component of Out For Justice is an optimization algorithm. Given an existing car placement, it is natural to ask "can we do better?" We use a version of the Metropolis-Hastings algorithm to compute the answer to this question: first, we choose a random car to move a random distance on the graph. 
+Perhaps most critically, we show that probabilistic forecasts showing more of a blowout can lower voting. In Study 1, we find limited evidence of this based on self reports. In Study 2, we show that when participants are faced with incentives designed to simulate real world voting, they are less likely to vote when probabilistic forecasts show higher odds of one candidate winning. Yet they are not responsive to changes in vote share.
 
+![normal](/assets/img/FT_18.01.03_prob_vote.png)
 
-To add stochasticity to this algorithm with a small probability we keep this move no matter what. With the complementary probability we do something smarter: we ask whether this move improves the weighted response time. If this move improves the response time by a meaningful amount, we keep it. If it doesn't, we revert it and try something else. This algorithm has a few parameters to tune, namely the probability of keeping any move and the threshold of improvement that we require to count the move as a success. The current version makes no pretense of having these parameters set optimally, though we did play with them somewhat.
+**Could this actually affect real world voting?**
 
+Consider 2016---an unusually high number of Democrats thought the leading candidate would *win by quite a bit*:
 
-**THE OUT FOR JUSTICE TEAM**
+![normal](/assets/img/anes_turnout_closerace_mc_tall.png)
 
-Ta Virot Chiraphadhanakul [@tvirot](https://twitter.com/tvirot)
+And people who say the leading candidate will *win by quite a bit* in pre-election polling are about three percentage points less likely to say they voted after the election than people who say it’s a close race. That’s after controlling for election year, prior turnout, and party identification. 
 
-Sean J. Taylor [@seanjtaylor](https://twitter.com/seanjtaylor)
+![normal](/assets/img/closerace_vote_anes.png)
 
-Alex Peysakhovich [@alex_peys](https://twitter.com/alex_peys)
-
-Solomon Messing [@SolomonMg](https://twitter.com/SolomonMg)
-
-![half](/assets/img/Hackathon_team.jpg)
+The data here are from the [American National Election Study (ANES)](https://electionstudies.org) and go back to 1952.
 
 
-UPDATE: Nice coverage on [Mashable](https://mashable.com/2014/11/17/data-hackathon/#EHDv8ugj7aqN) of the entire hackathon! Check out the winning hackathon project.
+
+Past work indicates that *uncertainty* in perceived pivotality affects turnout. Some of the best evidence comes from work that analyzes the effects of releasing exit polling results before voting ends, which clearly removes uncertainty. Work examining the effects of East Coast television networks’ “early calls” for one candidate or another on West Coast turnout generally find small but substantively meaningful effects, despite the fact that these calls occur late on election day {% cite carpini1984scooping}. Similar work exploiting voting reform as a natural experiment shows a full 12 percentage point decrease in turnout in the French overseas territories that voted after exit polls were released [@Morton201565]. These designs also isolate the effect of information about closeness from campaigns’ tendencies to invest more in campaigns in competitive districts.
+
+Other aggregate level studies find similar patterns consistent with a relationship between uncertainty and turnout. First of all, a large literature has demonstrated robust correlations between tighter elections and higher turnout [see @geys2006explaining; @cancela2016explaining for reviews]. Furthermore, @nicholson1997prior provide evidence from statistical models that prior election returns also explain turnout above and beyond campaign spending, particularly when good polling data is unavailable. With ANES data we show that from 1952-2016, people who said that one candidate will “win by quite a bit” in pre-election polling were less likely to vote, even after conditioning on prior turnout, year, party, and actual electoral college and popular vote margin (see Table A2 and Figure A3).
+
+Field experiments provide additional evidence of a causal effect of how confidence in perceptions of electoral closeness can affect turnout. This literature finds substantive effects on turnout when polling results showing a closer race are delivered via telephone [among those who were reached, @biggers2017experimental] but null results when relying on postcards to deliver closeness messages [for which it’s not possible to verify the treatment was actually read, @gerber2017one; @biggers2017experimental].[^7] Finally, one study conducted in the weeks leading up to the 2012 presidential election found higher rates of self-reported, post-election turnout when delivering ostensible polling results *less* consistent with the extant polling data showing a comfortable Obama lead [@Vannette:2014vk].
+
+
+A lot of past [research](https://huber.research.yale.edu/materials/67_paper.pdf) [shows](http://www2.gsu.edu/~polsnn/priorbeliefs.pdf) that when people [think](https://www.jstor.org/stable/1953324?seq=1#page_scan_tab_contents) an election is [in the bag](https://repository.upenn.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=1018&context=asc_papers), they tend to [vote in real-world elections](https://www.sciencedirect.com/science/article/pii/S0014292115000483) at [lower rates](https://www.jstor.org/stable/2748722?seq=1#page_scan_tab_contents). Our study provides evidence that probabilistic forecasts give people more confidence that one candidate will win and suggestive evidence that we should expect them to vote at lower rates after seeing probabilistic forecasts.
+
+Consider what else was different in 2016---there was much more material covering probablistic forecasts: 
+
+
+![](/assets/img/forecast_google_news.png) 
+Number of articles mentioning probabilistic forecasts indexed by Google News.
+
+This research shows that election forecasts can make a race look less competitive and decrease voting. 
+This is not merely academic because on balance liberals are more likely to see election forecasts.  
+
+
+[**Projecting Confidence: How the Probabilistic Horse Race Confuses and Demobilizes the Public**](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3117054).
+
+With Sean Westwood and Yphtach Lelkes
+
+- Media coverage: [Washington Post](https://www.washingtonpost.com/news/politics/wp/2018/02/06/clintons-achilles-heel-in-2016-may-have-been-overconfidence/?utm_term=.619133ce9312), [FiveThirthyEight’s Politics Podcast](https://fivethirtyeight.com/features/politics-podcast-whats-so-wrong-with-nancy-pelosi/), [New York Magazine](http://nymag.com/intelligencer/2018/02/americans-dont-understand-election-probabilities.html?gtm=bottom&gtm=bottom), [Political Wire](https://politicalwire.com/2018/02/06/election-forecasts-lower-voter-turnout/).
+
+Abstract: Horse race coverage in American elections has shifted focus from late-breaking poll numbers to sophisticated meta analytic forecasts that often emphasize candidates' probability of victory. We place this "probabilistic horeserace" in the context of Riker and Ordeshook (1968), and hypothesize that it will lower uncertainty about an election's outcome (perceived potential pivotality), which lowers turnout under the model. After demonstrating the prominence of probabilistic forecasts in election coverage, we use experiments to show that the public has difficulty reasoning about the probability of a candidate’s victory. Critically, when one candidate is ahead, win-probabilities convey substantially more confidence that she will win compared to vote share estimates. Even more importantly, we show that these impressions of probabilistic forecasts cause people not to vote in a behavioral game that simulates elections. In the context of the existing literature, the magnitude of these findings suggests that probabilistic horse race coverage can confuse and demobilize the public.
+
+
+{% bibliography --cited %}
 
