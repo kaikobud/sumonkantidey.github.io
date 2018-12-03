@@ -2,7 +2,7 @@
 layout: page
 title: Out for Justice
 description: ML & decision support to optimize patrols
-img: /assets/img/OutForJustice.png
+img: /assets/img/OutForJustice.jpg
 ---
 
 <iframe src="https://player.vimeo.com/video/111994655" width="640" height="330" frameborder="0" allowfullscreen></iframe>

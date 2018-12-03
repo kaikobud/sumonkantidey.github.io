@@ -100,11 +100,11 @@ Field experiments provide additional evidence that perceptions of higher elector
 
 Candidates’ perceptions of the closeness of an election can affect campaigning and representation {%cite enos2015campaign%}, {%cite Mutz:1997wy%}. 
 
-These perceptions can also shape policy decisions—-for example, prior to the 2016 election, the Obama administration’s confidence in a Clinton victory was reportedly a factor in the muted response to Russian intervention in the election {%cite greg_miller_obamas_2017}. 
+These perceptions can also shape policy decisions—-for example, prior to the 2016 election, the Obama administration’s confidence in a Clinton victory was reportedly a factor in the muted response to [Russian intervention in the election](https://www.washingtonpost.com/graphics/2017/world/national-security/obama-putin-election-hacking/). 
 
-And former FBI Director James Comey, because of his confidence in a Clinton victory, said he felt that it was his duty to write a letter to Congress on October 28 saying he was reopening the investigation into her emails. Comey explained his actions based on his certain belief in a Clinton win: ''[S]he's gonna be elected president, and if I hide this from the American people, she'll be illegitimate the moment she's elected, the moment this comes out'' \citep{keneally_2018}. Nate Silver at one point said ''the Comey letter probably cost Clinton the Election'' {% cite silver_2017%}. 
+And former FBI Director James Comey, because of his confidence in a Clinton victory, said he felt that it was his duty to write a letter to Congress on October 28 saying he was reopening the investigation into her emails. Comey explained his actions based on his certain belief in a Clinton win: ''[S]he's gonna be elected president, and if I hide this from the American people, she'll be illegitimate the moment she's elected, the moment this comes out'' {%cite keneally_2018%}. Nate Silver at one point said ''[the Comey letter probably cost Clinton the Election](https://fivethirtyeight.com/features/the-comey-letter-probably-cost-clinton-the-election/).'' 
 
-![](/assets/img/ComeyABCCNNresize.png)
+![](/assets/img/ComeyABCCNNresize.jpg)
 
 **Media coverage**
 [Washington Post](https://www.washingtonpost.com/news/politics/wp/2018/02/06/clintons-achilles-heel-in-2016-may-have-been-overconfidence/?utm_term=.619133ce9312), [FiveThirthyEight’s Politics Podcast](https://fivethirtyeight.com/features/politics-podcast-whats-so-wrong-with-nancy-pelosi/), [New York Magazine](http://nymag.com/intelligencer/2018/02/americans-dont-understand-election-probabilities.html?gtm=bottom&gtm=bottom), [Political Wire](https://politicalwire.com/2018/02/06/election-forecasts-lower-voter-turnout/).
