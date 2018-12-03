@@ -17,9 +17,44 @@ In 2016 there was significantly more media covrerage of probablistic forecasts t
 (Number of articles mentioning probabilistic forecasts indexed by Google News.)
 
 
+**How we studied this?**
+
 [Our research](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3117054). shows that probablistic election forecasts make a race look less competitive. Participants in a national probability survey-experiment were substantially more certain that one candidate would win a hypothetical race after seeing a probablistic forecast than after seeing the equivalent vote share estimate and margin of error. This is a big effect---those are confidence intervals not standard errors, with p-values below $$10^{-11}$$. 
 
 ![normal](/assets/img/certaintyc.png)
+
+**Why do people do this?**
+
+More research is needed here but we do have some leads. First, small differences in the election metric most familiar to the public—vote share estimates—generally correspond to very large differences in the probability of a candidate’s chance of victory. 
+
+Andy Gelman referenced this in passing in a [2012 blogpost](https://andrewgelman.com/2012/10/22/is-it-meaningful-to-talk-about-a-probability-of-65-7-that-obama-will-win-the-election/) questioning the decimal precision (0.1 percent) that 538 used to communicate its forecast on its website: 
+
+> That’s right: a change in 0.1 of win probability corresponds to a 0.004 percentage point share of the two-party vote. I can’t see that it can possibly make sense to imagine an election forecast with that level of precision...
+
+Second, people sometimes confuse probabilistic forecasts with vote share projections, and incorrectly conclude that a candidate is projected to say win 85% percent of the vote, rather than to having an 85% chance of winning the election. About 1 in 10 peope did this in our experiment. 
+
+As [Joshua Benton pointed out in a tweet](https://twitter.com/jbenton/status/1059898288139354112), TalkingPointsMemo.com [made this very mistake](https://talkingpointsmemo.com/news/issa-calls-race-early):
+
+![](/assets/img/TPMCorrection.jpg)
+
+Finally, people tend to think in qualitative terms about the probability of events {%cite sunstein2002probability%}, {%cite keren1991calibration%}. An 85% likelihood that something will happen means it's going to happen. These studies may help explain why after the 2016 election, so many criticized forecasters for “getting it wrong” (see [this(https://www.nytimes.com/2016/11/10/technology/the-data-said-clinton-would-win-why-you-shouldnt-have-believed-it.html
+)] and [this](http://www.slate.com/articles/news_and_politics/politics/2016/01/nate_silver_said_donald_trump_had_no_shot_where_did_he_go_wrong.html).
+
+**How much influence do forecasters really have?**
+
+Well, FiveThirtyEight's 2018 coverage seems to have been highly influential.  After their real-time forecast had GOP's odds of taking the House spiking at 60% at ~8:15PM, PredictIt's odds on the GOP rose above 50-50, & _U.S. government bond yields saw brief spike of 2-4 basis points._
+
+![](/assets/img/538-markets.jpg)
+
+This spike seems to have occurred because a number of big, [Republican-dominated districts started reporting returns before those that went toward Democrats](https://fivethirtyeight.com/live-blog/2018-election-results-coverage/#3495) and because it was making inferences from partial vote counts:
+
+![](/assets/img/538realtimepolling.jpg)
+
+This was [first reported by Colby Smith & Brian Greeley of FT.com](https://ftalphaville.ft.com/2018/11/07/1541617447000/Debt-markets-let-us-know-what-they-think-about-Republicans-last-night/). They report that because markets expected to see more inflation under a Republican House (high spending, low taxes) the U.S. Bond yield rose. 
+
+Was this just a correlation? Possibly, but there was pretty much nothing else happening in the U.S., and it was like 1 am in Europe, as pointed out in the FT.com piece above.
+
+Josh Tucker suggested that [538 might be driving prediction markets](http://themonkeycage.org/2012/10/convergence-between-polls-and-prediction-markets-in-us-presidential-election/) back in 2012 in a Monkey Cage blogpost. 
 
 **Why might the left be more affected?**
  
@@ -61,6 +96,15 @@ Researchers consistently find robust correlations between tighter elections and 
 
 Field experiments provide additional evidence that perceptions of higher electoral competition increases turnout. This work finds substantive effects on turnout when polling results showing a closer race are delivered via telephone [among those who were reached, {% cite biggers2017experimental %}] but null results when relying on postcards to deliver closeness messages [for which it’s not possible to verify the treatment was actually read, {% cite gerber2017one %}; {% cite biggers2017experimental%}. Finally, one study conducted in the weeks leading up to the 2012 presidential election found higher rates of self-reported, post-election turnout when delivering ostensible polling results showing Obama neck-and-neck with Romney [which was not consistent with the extant polling data showing a comfortable Obama lead, {% cite Vannette:2014vk %}].
 
+**Could this affect politicians as well?**
+
+Candidates’ perceptions of the closeness of an election can affect campaigning and representation {%cite enos2015campaign%}, {%cite Mutz:1997wy%}. 
+
+These perceptions can also shape policy decisions—-for example, prior to the 2016 election, the Obama administration’s confidence in a Clinton victory was reportedly a factor in the muted response to Russian intervention in the election {%cite greg_miller_obamas_2017}. 
+
+And former FBI Director James Comey, because of his confidence in a Clinton victory, said he felt that it was his duty to write a letter to Congress on October 28 saying he was reopening the investigation into her emails. Comey explained his actions based on his certain belief in a Clinton win: ''[S]he's gonna be elected president, and if I hide this from the American people, she'll be illegitimate the moment she's elected, the moment this comes out'' \citep{keneally_2018}. Nate Silver at one point said ''the Comey letter probably cost Clinton the Election'' {% cite silver_2017%}. 
+
+![](/assets/img/ComeyABCCNNresize.png)
 
 **Media coverage**
 [Washington Post](https://www.washingtonpost.com/news/politics/wp/2018/02/06/clintons-achilles-heel-in-2016-may-have-been-overconfidence/?utm_term=.619133ce9312), [FiveThirthyEight’s Politics Podcast](https://fivethirtyeight.com/features/politics-podcast-whats-so-wrong-with-nancy-pelosi/), [New York Magazine](http://nymag.com/intelligencer/2018/02/americans-dont-understand-election-probabilities.html?gtm=bottom&gtm=bottom), [Political Wire](https://politicalwire.com/2018/02/06/election-forecasts-lower-voter-turnout/).
