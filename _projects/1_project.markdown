@@ -5,23 +5,57 @@ description: How the Probabilistic Horse Race Demobilizes the Public
 img: /assets/img/anes_turnout_closerace_mc_tall.png
 ---
 
-Inspired by Donald Trump's shocking victory over Hillary Clinton in the 2016 general election, Sean Westwood, Yphtach Lelkes and I set out to interrogate the question of whether elecion forecasts---particularly probablistic forecasts---might have helped to create a false sense of confidence in a Clinton victory, and ultimately led many on the left to stay home on election day. 
+Inspired by Donald Trump's shocking victory over Hillary Clinton in the 2016 general election, [Sean Westwood](https://www.dartmouth.edu/~seanjwestwood/), [Yphtach Lelkes](http://ylelkes.com/) and I set out to interrogate the question of whether elecion forecasts---particularly probablistic forecasts---might have helped to create a false sense of confidence in a Clinton victory, and ultimately led many on the left to stay home on election day. 
 
 Clinton herself was quoted in [New York Magazine](http://nymag.com/daily/intelligencer/2017/05/hillary-clinton-life-after-election.html?mid=nymag_press) after the election:
 
 > I had people literally seeking absolution... ‘_I’m so sorry I didn’t vote. I didn’t think you needed me._’ I don’t know how we’ll ever calculate how many people thought it was in the bag, because the percentages kept being thrown at people — ‘_Oh, she has an 88 percent chance to win!_’
+
+**Seriously, it is plausible that forecasting could have affected the election?**
+
+For this to affect the election, it has to be out there in the media reaching potential voters, depress turnout, and to affect Clinton supporters (and/or Clinton campaigners) moreso than for Trump. 
 
 In 2016 there was significantly more media covrerage of probablistic forecasts than in past election cycles: 
 
 ![](/assets/img/forecast_google_news.png) 
 (Number of articles mentioning probabilistic forecasts indexed by Google News.)
 
+ And our research (see results below) suggests that _candidate who is ahead in the polls is more affected_ by probablistic forecasts. In 2016, that was Hillary. 
 
-**How we studied this?**
+But irrespective of 2016, when you look at who engages with this material in both social media and television media, it's outlets with a left-leaning audience. The websites that present their poll aggregation results in terms of probabilities have left-leaning (negative) social media audiences---only realclearpolitics.com, which doesn’t emphasize win-probabilities, has a conservative audience:
 
-[Our research](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3117054). shows that probablistic election forecasts make a race look less competitive. Participants in a national probability survey-experiment were substantially more certain that one candidate would win a hypothetical race after seeing a probablistic forecast than after seeing the equivalent vote share estimate and margin of error. This is a big effect---those are confidence intervals not standard errors, with p-values below $$10^{-11}$$. 
+![half](/assets/img/bma_science_alignment.png)
+
+These data come from the average self-reported ideology of people who share links to various sites hosting poll-aggregators on Facebook, data that come from [this paper](http://science.sciencemag.org/content/early/2015/05/06/science.aaa1160.full)’s [replication materials](http://dx.doi.org/10.7910/DVN/LDJ7MS). 
+
+When you look at the balance of coverage of probabilistic forecasts on major television broadcasts, there is more coverage on MSNBC, which has a more liberal audience.
+
+![half](/assets/img/msnbc_mentions.png)
+
+
+**How much influence do forecasters really have?**
+
+Well, FiveThirtyEight's 2018 coverage seems to have been highly influential.  After their real-time forecast had GOP's odds of taking the House spiking at 60% at around 8:15PM, PredictIt's odds on the GOP rose above 50-50, & _U.S. government bond yields saw brief spike of 2-4 basis points._
+
+![](/assets/img/538-markets.jpg)
+
+This spike seems to have occurred because a number of big, [Republican-dominated districts started reporting returns before those that went toward Democrats](https://fivethirtyeight.com/live-blog/2018-election-results-coverage/#3495) and because it was making inferences from partial vote counts:
+
+![half](/assets/img/538realtimepolling.jpg)
+
+This was [first reported by Colby Smith & Brian Greeley of FT.com](https://ftalphaville.ft.com/2018/11/07/1541617447000/Debt-markets-let-us-know-what-they-think-about-Republicans-last-night/). They report that because markets expected to see more inflation under a Republican House (high spending, low taxes) the U.S. Bond yield rose. 
+
+Was this just a correlation? Possibly, but there was pretty much nothing else happening in the U.S., and it was like 1 am in Europe, as pointed out in the FT.com piece above.
+
+Josh Tucker suggested that [538 might be driving prediction markets](http://themonkeycage.org/2012/10/convergence-between-polls-and-prediction-markets-in-us-presidential-election/) back in 2012 in a Monkey Cage blogpost. 
+
+
+**Our research on forecasting and perception**
+
+[Our research](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3117054) shows that probablistic election forecasts make a race look less competitive. Participants in a national probability survey-experiment were substantially more certain that one candidate would win a hypothetical race after seeing a probablistic forecast than after seeing the equivalent vote share estimate and margin of error. This is a big effect---those are confidence intervals not standard errors, with p-values below $$10^{-11}$$. 
 
 ![normal](/assets/img/certaintyc.png)
+
 
 **Why do people do this?**
 
@@ -39,36 +73,6 @@ As [Joshua Benton pointed out in a tweet](https://twitter.com/jbenton/status/105
 
 Finally, people tend to think in qualitative terms about the probability of events {%cite sunstein2002probability%}, {%cite keren1991calibration%}. An 85% likelihood that something will happen means it's going to happen. These studies may help explain why after the 2016 election, so many criticized forecasters for “getting it wrong” (see [this](https://www.nytimes.com/2016/11/10/technology/the-data-said-clinton-would-win-why-you-shouldnt-have-believed-it.html
 ) and [this](http://www.slate.com/articles/news_and_politics/politics/2016/01/nate_silver_said_donald_trump_had_no_shot_where_did_he_go_wrong.html)).
-
-**How much influence do forecasters really have?**
-
-Well, FiveThirtyEight's 2018 coverage seems to have been highly influential.  After their real-time forecast had GOP's odds of taking the House spiking at 60% at around 8:15PM, PredictIt's odds on the GOP rose above 50-50, & _U.S. government bond yields saw brief spike of 2-4 basis points._
-
-![](/assets/img/538-markets.jpg)
-
-This spike seems to have occurred because a number of big, [Republican-dominated districts started reporting returns before those that went toward Democrats](https://fivethirtyeight.com/live-blog/2018-election-results-coverage/#3495) and because it was making inferences from partial vote counts:
-
-![](/assets/img/538realtimepolling.jpg)
-
-This was [first reported by Colby Smith & Brian Greeley of FT.com](https://ftalphaville.ft.com/2018/11/07/1541617447000/Debt-markets-let-us-know-what-they-think-about-Republicans-last-night/). They report that because markets expected to see more inflation under a Republican House (high spending, low taxes) the U.S. Bond yield rose. 
-
-Was this just a correlation? Possibly, but there was pretty much nothing else happening in the U.S., and it was like 1 am in Europe, as pointed out in the FT.com piece above.
-
-Josh Tucker suggested that [538 might be driving prediction markets](http://themonkeycage.org/2012/10/convergence-between-polls-and-prediction-markets-in-us-presidential-election/) back in 2012 in a Monkey Cage blogpost. 
-
-**Why might the left be more affected?**
- 
-Consider the figure above---the _candidate who is ahead in the polls_ is more affected. In 2016, that was Hillary. 
-
-But irrespective of 2016, when you look at who engages with this material in both social media and television media, it's outlets with a left-leaning audience. The websites that present their poll aggregation results in terms of probabilities have left-leaning (negative) social media audiences---only realclearpolitics.com, which doesn’t emphasize win-probabilities, has a conservative audience:
-
-![half](/assets/img/bma_science_alignment.png)
-
-These data come from the average self-reported ideology of people who share links to various sites hosting poll-aggregators on Facebook, data that come from [this paper](http://science.sciencemag.org/content/early/2015/05/06/science.aaa1160.full)’s [replication materials](http://dx.doi.org/10.7910/DVN/LDJ7MS). 
-
-When you look at the balance of coverage of probabilistic forecasts on major television broadcasts, there is more coverage on MSNBC, which has a more liberal audience.
-
-![half](/assets/img/msnbc_mentions.png)
 
 
 **What about voting?**
