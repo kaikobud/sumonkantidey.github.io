@@ -75,6 +75,7 @@ highlighter: rouge
 # Includes & excludes
 include: ['_pages']
 exclude: [vendor]
+exclude: [node_modules]
 
 # Plug-ins
 plugins:

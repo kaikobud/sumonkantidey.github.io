@@ -38,11 +38,11 @@ As [Joshua Benton pointed out in a tweet](https://twitter.com/jbenton/status/105
 ![](/assets/img/TPMCorrection.jpg)
 
 Finally, people tend to think in qualitative terms about the probability of events {%cite sunstein2002probability%}, {%cite keren1991calibration%}. An 85% likelihood that something will happen means it's going to happen. These studies may help explain why after the 2016 election, so many criticized forecasters for “getting it wrong” (see [this](https://www.nytimes.com/2016/11/10/technology/the-data-said-clinton-would-win-why-you-shouldnt-have-believed-it.html
-) and [this](http://www.slate.com/articles/news_and_politics/politics/2016/01/nate_silver_said_donald_trump_had_no_shot_where_did_he_go_wrong.html).
+) and [this](http://www.slate.com/articles/news_and_politics/politics/2016/01/nate_silver_said_donald_trump_had_no_shot_where_did_he_go_wrong.html)).
 
 **How much influence do forecasters really have?**
 
-Well, FiveThirtyEight's 2018 coverage seems to have been highly influential.  After their real-time forecast had GOP's odds of taking the House spiking at 60% at ~8:15PM, PredictIt's odds on the GOP rose above 50-50, & _U.S. government bond yields saw brief spike of 2-4 basis points._
+Well, FiveThirtyEight's 2018 coverage seems to have been highly influential.  After their real-time forecast had GOP's odds of taking the House spiking at 60% at around 8:15PM, PredictIt's odds on the GOP rose above 50-50, & _U.S. government bond yields saw brief spike of 2-4 basis points._
 
 ![](/assets/img/538-markets.jpg)
 
