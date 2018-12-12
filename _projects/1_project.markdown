@@ -11,7 +11,7 @@ Clinton herself was quoted in [New York Magazine](http://nymag.com/daily/intelli
 
 > I had people literally seeking absolution... ‘_I’m so sorry I didn’t vote. I didn’t think you needed me._’ I don’t know how we’ll ever calculate how many people thought it was in the bag, because the percentages kept being thrown at people — ‘_Oh, she has an 88 percent chance to win!_’
 
-**Seriously, it is plausible that forecasting could have affected the election?**
+**Is it plausible that forecasting could have affected the election?**
 
 For this to affect the election, it has to be out there in the media reaching potential voters, depress turnout, and to affect Clinton supporters (and/or Clinton campaigners) moreso than for Trump. 
 

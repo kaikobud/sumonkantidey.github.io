@@ -4,7 +4,7 @@ title: Insight From Cleveland And Tufte On Plotting Numeric Data By Groups
 image: dotplot-story-rating.png
 ---
 
-[![half](/assets/img/dotplot-story-rating.png "dotplot-story-rating")
+![half](/assets/img/dotplot-story-rating.png "dotplot-story-rating")
 
 After my post on making [dotplots with concise code using plyr and ggplot](http://solomonmessing.wordpress.com/2011/11/26/putting-it-all-together-concise-code-to-make-dotplots-with-weighted-bootstrapped-standard-errors/), I got an email from my dad who practices immigration law and runs a [website with a variety of immigration resources and tools](http://www.messinglawoffices.com/default.aspx).  He pointed out that the post was written for folks who already know that they want to make dot plots, and who already know about bootstrapped standard errors.  That's not many people.
 

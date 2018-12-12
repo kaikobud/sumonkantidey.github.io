@@ -4,8 +4,11 @@ title: Replication of "Bias in the Flesh"
 image: a0415aa41faee2db8452e14712ae9505f7a96f0a.png
 ---
 **Replication of Study 2 in \"Bias in the Flesh: Skin Complexion and Stereotype Consistency in Political Campaigns\"**
+
 This post presents a replication of [Messing et al](https://www.dropbox.com/s/et4rnj2duzsuhiq/HSVmetricsCampaignsDarknessPOQFINAL.pdf?raw=true). (2016, study 2), which showed that exposure to darker images of Barack Obama increased stereotype activation, as indicated by the tendency to finish incomplete word prompts\-\--such as "W E L \_ \_ \_ \_"\-\--in stereotype-consistent ways ("WELFARE").
+
 Overall, the replication shows that darker images of even [counter-stereotypical exemplars like Barack Obama](http://www.sciencedirect.com/science/article/pii/S0022103110002635) can increase stereotype activation, but that the strength of the effect is weaker than conveyed in the original study.  A reanalysis of the original study conducted in the course of this replication effort unearthed a number of problems that, when corrected, yield estimates of the effect that are consistent with those documented in the replication. This reanalysis also follows.
+
 I\'m posting this to
 
 1.  disseminate a [corrected version of the original study](https://www.dropbox.com/s/et4rnj2duzsuhiq/HSVmetricsCampaignsDarknessPOQFINAL.pdf?raw=true);
@@ -131,18 +134,31 @@ Below I present alternate specifications estimated without pooling. These specif
 Outcome measure summing all items:
 
 Replication 1: M\_Light = 1.29, M\_Dark = 1.36, T(2115.4) = -1.59, P = 0.113, two-sided
+
 Replication 2: M\_Light = 1.30, M\_Dark = 1.39, T(982.7) = -1.35, P = 0.177, two-sided
+
 Original Alpha outcome measure:
+
 Replication 1: M\_Light = 0.99, M\_Dark = 1.06, T(2114.9) = -1.79, P = 0.073, two-sided
+
 Replication 2: M\_Light = 1.04, M\_Dark = 1.09, T(979.8) = -0.85, P = 0.393, two-sided
+
 Newly estimated Alpha outcome measure:
+
 Replication 1: M\_Light = 1.02, M\_Dark = 1.09, T(2109.4) = -1.77, P = 0.077, two-sided
+
 Replication 2: M\_Light = 1.07, M\_Dark = 1.10, T(984.6) = -0.53, P = 0.597, two-sided
+
 Original ICC outcome measure:
+
 Replication 1: M\_Light = 0.89, M\_Dark = 0.94, T(2100.6) = -1.49, P = 0.137, two-sided.
+
 Replication 2: M\_Light = 0.93, M\_Dark = 0.96, T(985.9) = -0.67, P = 0.506, two-sided
+
 Newly estimated ICC outcome measure
+
 Replication 1: M\_Light = 0.35, M\_Dark = 0.36, T(2122.5) = -0.22, P = 0.826, two-sided
+
 Replication 2: M\_Light = 0.38, M\_Dark = 0.40, T(978.7) = -0.72, P = 0.472, two-sided
  
 A replication of prior [critique and reanalysis](http://www.ljzigerell.com/?p=3622).  The patterns that run contrary to our original findings are not significant in the replication data.
