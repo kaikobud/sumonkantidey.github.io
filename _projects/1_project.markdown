@@ -5,7 +5,7 @@ description: How the Probabilistic Horse Race Demobilizes the Public
 img: /assets/img/anes_turnout_closerace_mc_tall.png
 ---
 
-Inspired by Donald Trump's shocking victory over Hillary Clinton in the 2016 general election, [Sean Westwood](https://www.dartmouth.edu/~seanjwestwood/), [Yphtach Lelkes](http://ylelkes.com/) and I set out to interrogate the question of whether elecion forecasts---particularly probablistic forecasts---might have helped to create a false sense of confidence in a Clinton victory, and ultimately led many on the left to stay home on election day. 
+Inspired by Donald Trump's surprise victory over Hillary Clinton in the 2016 general election, [Sean Westwood](https://www.dartmouth.edu/~seanjwestwood/), [Yphtach Lelkes](http://ylelkes.com/) and I set out to interrogate the question of whether elecion forecasts---particularly probablistic forecasts---might create a sense of inevitability, and ultimately lead people to stay home on election day. 
 
 Clinton herself was quoted in [New York Magazine](http://nymag.com/daily/intelligencer/2017/05/hillary-clinton-life-after-election.html?mid=nymag_press) after the election:
 
@@ -13,16 +13,18 @@ Clinton herself was quoted in [New York Magazine](http://nymag.com/daily/intelli
 
 **Is it plausible that forecasting could have affected the election?**
 
-For this to affect the election, it has to be out there in the media reaching potential voters, depress turnout, and to affect Clinton supporters (and/or Clinton campaigners) moreso than for Trump. 
+For this phenomena to affect an election, it must: 
+1. be visible in the media so it reaches potential voters, 
+2. depress turnout, and
+3. affect one side more than the other. In the case of 2016, that means affecting Clinton's supporters (and/or Clinton campaigners) more than Trump's. 
 
-In 2016 there was significantly more media covrerage of probablistic forecasts than in past election cycles: 
+We found evidence for all of the above. First, witness the rise of forecasts since 2008, when FiveThirtyEight first came on the scene: 
 
 ![](/assets/img/forecast_google_news.png) 
-(Number of articles mentioning probabilistic forecasts indexed by Google News.)
 
- And our research (see results below) suggests that _candidate who is ahead in the polls is more affected_ by probablistic forecasts. In 2016, that was Hillary. 
+What's more, there is good evidence that one side will be more affected. Our research (see results below) suggests that _candidate who is ahead in the polls is more affected_ by probablistic forecasts. In 2016, that was Hillary. 
 
-But irrespective of 2016, when you look at who engages with this material in both social media and television media, it's outlets with a left-leaning audience. The websites that present their poll aggregation results in terms of probabilities have left-leaning (negative) social media audiences---only realclearpolitics.com, which doesn’t emphasize win-probabilities, has a conservative audience:
+And irrespective of 2016, it's outlets with a _left-leaning audience_ that publish and cover election forecasts. The websites that present their poll aggregation results in terms of probabilities have left-leaning (negative) social media audiences---only realclearpolitics.com, which doesn’t emphasize win-probabilities, has a conservative audience:
 
 ![half](/assets/img/bma_science_alignment.png)
 
@@ -35,7 +37,9 @@ When you look at the balance of coverage of probabilistic forecasts on major tel
 
 **How much influence do forecasters really have?**
 
-Well, FiveThirtyEight's 2018 coverage seems to have been highly influential.  After their real-time forecast had GOP's odds of taking the House spiking at 60% at around 8:15PM, PredictIt's odds on the GOP rose above 50-50, & _U.S. government bond yields saw brief spike of 2-4 basis points._
+It's increadibly difficult to tease out when one media outlet is influencing another. However, a freak event in 2018 allows us to get some traction on this question, and suggests that FiveThirtyEight's 2018 coverage was highly influential.  
+
+After FiveThirtyEight's real-time forecast suddenely moved the the GOP's odds of taking the House from single digits to about 60% at around 8:15PM, PredictIt's odds on the GOP rose above 50-50, & _U.S. government bond yields rose 2-4 basis points._  FiveThirtyEight then altered it's prediction system and the markets calmed down. 
 
 ![](/assets/img/538-markets.jpg)
 
