@@ -2,6 +2,7 @@
 layout: post
 title: Why Election Forecasting Matters - A Response to FiveThirtyEight
 image: anes_turnout_closerace_mc_tall.png
+redirect_from: "/2018/02/16/response-to-fivethirtyeights-podcast-about-our-paper-projecting-confidence/"
 ---
 Do you remember the night of Nov 8, 2016? I was glued to election coverage and obsessively checking probabilistic forecasts, wondering whether Clinton might do _so well_ that she’d win in places like my home state of Arizona. Although FiveThirtyEight had Clinton's chances at beating Trump at around 70%, most other forecasters had her at around 90%.
 

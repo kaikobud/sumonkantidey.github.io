@@ -84,6 +84,8 @@ plugins:
     - jekyll/scholar
     - jemoji
     - jekyll-twitter-plugin
+    - jekyll-redirect-from
+
 
 markdown: kramdown
 kramdown:
