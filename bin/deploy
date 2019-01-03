@@ -63,7 +63,7 @@ if ! git diff-index --quiet HEAD --; then
 fi
 
 if ! [[ `git status --porcelain --untracked-files=no` ]]; then
-    echo "You have anot added the following files:"
+    echo "You have not added the following files:"
     git ls-files --others --exclude-standard
     echo "Please add these files before proceeding."
     echo "Aborting."
