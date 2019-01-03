@@ -2,7 +2,7 @@
 layout: page
 title: Projecting Confidence
 description: How the Probabilistic Horse Race Demobilizes the Public
-img: /assets/img/anes_turnout_closerace_mc_tall.png
+img: /assets/img/elliott-stallion-105205-unsplash.jpg
 ---
 
 Inspired by Donald Trump's surprise victory over Hillary Clinton in the 2016 general election, [Sean Westwood](https://www.dartmouth.edu/~seanjwestwood/), [Yphtach Lelkes](http://ylelkes.com/) and I set out to interrogate the question of whether elecion forecasts---particularly probablistic forecasts---might create a sense of inevitability, and ultimately lead people to stay home on election day. 
