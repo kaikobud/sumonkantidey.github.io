@@ -62,7 +62,7 @@ if ! git diff-index --quiet HEAD --; then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
 fi
 
-if ! [[ `git status --porcelain --untracked-files=no` ]]; then
+if [[ `git status --porcelain --untracked-files=no` ]]; then
     echo "You have not added the following files:"
     git ls-files --others --exclude-standard
     echo "Please add these files before proceeding."
