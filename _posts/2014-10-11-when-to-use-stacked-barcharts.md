@@ -2,6 +2,7 @@
 layout: post
 title: When to Use Stacked Barcharts?
 image: c6192637b5d6e48a1613d69e6a92dfa5b331f38f.png
+redirect_from: "/2014/10/11/when-to-use-stacked-barcharts/"
 ---
 
 ![normal](/assets/img/c6192637b5d6e48a1613d69e6a92dfa5b331f38f.png)

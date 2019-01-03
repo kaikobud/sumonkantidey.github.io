@@ -2,6 +2,7 @@
 layout: post
 title: Insight From Cleveland And Tufte On Plotting Numeric Data By Groups
 image: dotplot-story-rating.png
+redirect_from: "/2012/03/04/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/"
 ---
 
 ![half](/assets/img/dotplot-story-rating.png "dotplot-story-rating")

@@ -2,6 +2,7 @@
 layout: post
 title: Working with Bipartite/Affiliation Network Data in R
 image: 2mode.jpeg
+redirect_from: "/2012/09/30/working-with-bipartiteaffiliation-network-data-in-r/"
 ---
 ![](/assets/img/2mode.jpeg)
 

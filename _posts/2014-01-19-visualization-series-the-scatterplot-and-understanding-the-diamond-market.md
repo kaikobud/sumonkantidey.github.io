@@ -3,6 +3,7 @@ layout: post
 title: Using Scatterplots and Models to Understand the Diamond Market
 image: fbfa61f67413c8e2805c507a14b38c24c5373265.png
 comments: true
+redirect_from: "/2014/01/19/visualization-series-the-scatterplot-or-how-to-use-data-so-you-dont-get-ripped-off/"
 ---
 
 ![ggpairs](/assets/img/fbfa61f67413c8e2805c507a14b38c24c5373265.png)

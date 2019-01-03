@@ -2,6 +2,7 @@
 layout: post
 title: Ideologically diverse news, an agenda for future research
 image: 5a469dbbfb5b2916a87554ca4a247579da11e2b2.png
+redirect_from: "/2015/05/24/exposure-to-ideologically-diverse-news-and-opinion-future-research/"
 ---
 
 ### Eytan Bakshy & Solomon Messing
