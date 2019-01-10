@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Misclaneous projects and works in progress, ideally with eyecandy.
+description: Misclaneous projects and works in progress.
 ---
 
 {% for project in site.projects %}
