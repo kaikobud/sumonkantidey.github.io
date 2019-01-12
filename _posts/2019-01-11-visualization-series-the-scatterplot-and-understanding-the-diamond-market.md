@@ -16,7 +16,7 @@ A scatterplot is a two-dimensional plane on which we record the intersection of 
 
 In this post---part 1---I'll demonstrate various uses for scatterplots and outline some strategies to help make sure key patterns are not obscured by the scale or qualitative group-level differences in the data (e.g., the relationship between test scores and income differs for men and women). The motivation in this post is to come up with a model of diamond prices that you can use to help make sure you don't get ripped off, specified based on insight from exploratory scatterplots combined with (somewhat) informed speculation. In part 2, I'll discuss the use of panels aka facets aka small multiples to shed additional light on key patterns in the data, and local regression (loess) to examine central tendencies in the data. There are far fewer bad examples of this kind of visualization in the wild than the 3D barplots and pie charts mocked in my last post, though I was still able to find [a nice case of MS-Excel gridline abuse](http://www.windtesting.com/prototype%20power%20curve%20scatter%20plot.JPG) and [this lovely scatterplot + trend-line](http://www.showmethemath.com/Concepts_Explained/Scatter_Plot/homeworkScatterPlotAnswer.gif). 
 
-<!-- ![](/assets/img/0e5cd98eb90fbc27e55e776f3303057ef7a35dcb.gif) -->
+![](/assets/img/0e5cd98eb90fbc27e55e776f3303057ef7a35dcb.gif)
 
 ## Scatterplots and the Cartesian coordinate system
 
@@ -34,26 +34,26 @@ If you've ever used R, you've probably seen references to the diamonds data set 
 
 But even if you're not looking to buy a diamond, the socioeconomic and political history of the diamond industry is fascinating. Diamonds birthed the mining industry in South Africa, which is now by far the largest and most advanced economy in Africa.  I worked a summer in Johannesburg, and can assure you that South Africa's cities look far more like L.A. and San Francisco than Lagos, Cairo, Mogadishu, Nairobi, or Rabat.  Diamonds drove the British and Dutch to colonize southern Africa in the first place, and have stoked conflicts ranging from the Boer Wars to modern day wars in Sierra Leone, Liberia, Côte d'Ivoire, Zimbabwe and the DRC, where the 200 carat Millennium Star diamond was sold to DeBeers at the height of the civil war in the 1990s.  Diamonds were one of the few assets that Jews could conceal from the Nazis during [the "Aryanization of Jewish property"](http://www.archives.gov/research/holocaust/articles-and-papers/turning-history-into-justice.html) in the 1930s, and the Congressional Research Service reports that [Al Qaeda has used conflict diamonds to skirt international sanctions and finance operations from the 1998 East Africa Bombings to the September 11th attacks](http://royce.house.gov/uploadedfiles/rl30751.pdf). 
 
-<!-- ![](/assets/img/c7c2fd41f3cf8c8b7423ab84c12dfbd14fed71ca.jpg) -->
+![](/assets/img/c7c2fd41f3cf8c8b7423ab84c12dfbd14fed71ca.jpg)
 
 Though the diamonds data set is full of prices and fairly esoteric certification ratings, hidden in the data are reflections of how a [legendary marketing campaign permeated and was subsumed by our culture](http://www.nytimes.com/2013/05/05/fashion/weddings/how-americans-learned-to-love-diamonds.html), hints about how different social strata responded, and insight into how the diamond market functions as a result.
 
 [The story starts in 1870](http://www.theatlantic.com/magazine/archive/1982/02/have-you-ever-tried-to-sell-a-diamond/304575/) according to The Atlantic, when many tons of diamonds were discovered in South Africa near the Orange River.  Until then, diamonds were rare---only a few pounds were mined from India and Brazil each year.  At the time diamonds had no use outside of jewelry as they do today in many industrial applications, so price depended only on scarce supply.  Hence, the project's investors formed the De Beers Cartel in 1888 to control the global price---by most accounts the most successful cartel in history, [controlling 90% of the world's diamond supply until about 2000](http://en.wikipedia.org/wiki/De_Beers#Diamond_monopoly).  But World War I and the Great Depression saw diamond sales plummet.
 
-<!-- ![](/assets/img/0346d018cd97813448c1ce59a20353ed7c900013.jpg) -->
+![](/assets/img/0346d018cd97813448c1ce59a20353ed7c900013.jpg)
 
 In 1938, according to the New York Times' account, the De Beers cartel wrote Philadelphia ad agency N. W. Ayer & Son, to investigate whether "the use of propaganda in various forms" might jump-start diamond sales in the U.S., which looked like the only potentially viable market at the time.  Surveys showed diamonds were low on the list of priorities among most couples contemplating marriage---a luxury for the rich, "money down the drain."  Frances Gerety, who the Times compares to Madmen's Peggy Olson, took on the DeBeers' account at N.W. Ayer & Son, and worked toward the company's goal "to create a situation where almost every person pledging marriage feels compelled to acquire a diamond engagement ring."  A few years later, she coined the slogan, "Diamonds are forever."
 
-<!-- ![](/assets/img/90a8efdb27b9c59fbf6566591c14165beab4bfd6.jpg) -->
+![](/assets/img/90a8efdb27b9c59fbf6566591c14165beab4bfd6.jpg)
 
 The Atlantic's Jay Epstein argues that this campaign gave birth to modern demand-advertising---the objective was not direct sales, nor brand strengthening, but simply to impress the glamour, sentiment and emotional charge contained in the product itself.  The company gave diamonds to movie stars, sent out press packages emphasizing the size of diamonds celebrities gave each other, loaned diamonds to socialites attending prominent events like the Academy Awards and Kentucky Derby, and persuaded the British royal family to wear diamonds over other gems.  The diamond was also marketed as a status symbol, to reflect "a man's ... success in life," in ads with "the aroma of tweed, old leather and polished wood which is characteristic of a good club."  A 1980s ad introduced the two-month benchmark: "Isn't two months' salary a small price to pay for something that lasts forever?"
 
-<!-- ![](/assets/img/4f1b0bd62c2ab1b46e453b707d2981d84879d4ed.png) -->
+![](/assets/img/4f1b0bd62c2ab1b46e453b707d2981d84879d4ed.png)
 
 By any reasonable measure, Frances Gerety succeeded---getting engaged means getting a diamond ring in America. Can you think of a movie where two people get engaged without a diamond ring? When you announce your engagement on Facebook, what icon does the site display?  Still think this marketing campaign might not be the most successful mass-persuasion effort in history?  I present to you a James Bond film, whose title bears the diamond cartel's trademark:
 
-<!-- ![http://www.dvice.com/sites/dvice/files/diamonds-are-forever.jpg](/assets/img/f4eda42fe398a38837e01e97e4d07606a20171fe.jpg)
- -->
+![http://www.dvice.com/sites/dvice/files/diamonds-are-forever.jpg](/assets/img/f4eda42fe398a38837e01e97e4d07606a20171fe.jpg)
+
 Awe-inspiring and terrifying.  Let's open the data set.  
 
 The first thing you should consider doing is plotting key variables against each other using the ggpairs() function.  This function plots every variable against every other, pairwise.  For a data set with as many rows as the diamonds data, you may want to sample first otherwise things will take a long time to render.  Also, if your data set has more than about ten columns, there will be too many plotting windows, so subset on columns first.
