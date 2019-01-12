@@ -71,9 +71,9 @@ data(diamonds)
 diasamp = diamonds[sample(1:length(diamonds$price), 10000),]
 ggpairs(diasamp, params = c(shape = I('.'), outlier.shape = I('.')))
 ```
-<!-- 
-* R style note: I started using the "=" operator over "<-" after reading [John Mount's post on the topic](http://www.win-vector.com/blog/2013/04/prefer-for-assignment-in-r/?utm_source=rss&utm_medium=rss&utm_campaign=prefer-for-assignment-in-r), which shows how using "<-" (but not "=") incorrectly can result in silent errors.  There are other good reasons: 1.) WordPress and R-Bloggers occasionally mangle "<-" thinking it is HTML code in ways unpredictable to me; 2.) "=" is what every other programming language uses; and 3.) (as pointed out by Alex Foss in comments) consider "foo<-3" --- did the author mean to assign foo to 3 or to compare foo to -3?  Plus, 4.) the way R interprets that expression depends on white space---and if I'm using an editor like Emacs or Sublime where I don't have a shortcut key assigned to "<-", I sometimes get the whitespace wrong.  This means spending extra time and brainpower on debugging, both of which are in short supply.  
 
+<!-- * R style note: I started using the "=" operator over "<-" after reading [John Mount's post on the topic](http://www.win-vector.com/blog/2013/04/prefer-for-assignment-in-r/?utm_source=rss&utm_medium=rss&utm_campaign=prefer-for-assignment-in-r), which shows how using "<-" (but not "=") incorrectly can result in silent errors.  There are other good reasons: 1.) WordPress and R-Bloggers occasionally mangle "<-" thinking it is HTML code in ways unpredictable to me; 2.) "=" is what every other programming language uses; and 3.) (as pointed out by Alex Foss in comments) consider "foo<-3" --- did the author mean to assign foo to 3 or to compare foo to -3?  Plus, 4.) the way R interprets that expression depends on white space---and if I'm using an editor like Emacs or Sublime where I don't have a shortcut key assigned to "<-", I sometimes get the whitespace wrong.  This means spending extra time and brainpower on debugging, both of which are in short supply.  
+ -->
 Anyway, here's the plot:
 
 ![ggpairs](/assets/img/5226c40443deaf7c082cd464531f4e27c0f151be.png)
@@ -312,7 +312,7 @@ Here are the results for my recently scraped data set:
 
 Now those are some very nice R-squared values---we are accounting for almost all of the variance in price with the 4Cs.  If we want to know what whether the price for a diamond is reasonable, we can now use this model and exponentiate the result (since we took the log of price).  We need to multiply the result by exp(sigma^2/2), because the our error is no longer zero in expectation:
 
-$$ 
+<!-- $$ 
 \begin{align*}
 E(log(y) \mid \mathbf{X} = \mathbf{x}) &= E(\mathbf{X}\beta + \epsilon)\\
 	E(y \mid \mathbf{X} = \mathbf{x}) &= E( exp( \mathbf{X}\beta + \epsilon ) )\\
