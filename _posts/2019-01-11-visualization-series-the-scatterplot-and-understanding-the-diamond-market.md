@@ -71,7 +71,7 @@ data(diamonds)
 diasamp = diamonds[sample(1:length(diamonds$price), 10000),]
 ggpairs(diasamp, params = c(shape = I('.'), outlier.shape = I('.')))
 ```
-
+<!-- 
 * R style note: I started using the "=" operator over "<-" after reading [John Mount's post on the topic](http://www.win-vector.com/blog/2013/04/prefer-for-assignment-in-r/?utm_source=rss&utm_medium=rss&utm_campaign=prefer-for-assignment-in-r), which shows how using "<-" (but not "=") incorrectly can result in silent errors.  There are other good reasons: 1.) WordPress and R-Bloggers occasionally mangle "<-" thinking it is HTML code in ways unpredictable to me; 2.) "=" is what every other programming language uses; and 3.) (as pointed out by Alex Foss in comments) consider "foo<-3" --- did the author mean to assign foo to 3 or to compare foo to -3?  Plus, 4.) the way R interprets that expression depends on white space---and if I'm using an editor like Emacs or Sublime where I don't have a shortcut key assigned to "<-", I sometimes get the whitespace wrong.  This means spending extra time and brainpower on debugging, both of which are in short supply.  
 
 Anyway, here's the plot:
@@ -375,3 +375,4 @@ Don't make that mistake.
 That concludes part I of this series on scatterplots.  Part II will illustrate the advantages of using facets/panels/small multiples, and show how tools to fit trendlines including linear regression and local regression (loess) can help yield additional insight about your data. 
 
 You can also learn more about [exploratory data analysis via this Udacity course taught by my colleagues Dean Eckles and Moira Burke, and Chris Saden](https://www.udacity.com/course/ud651), which will be coming out in the next few weeks.
+ -->
