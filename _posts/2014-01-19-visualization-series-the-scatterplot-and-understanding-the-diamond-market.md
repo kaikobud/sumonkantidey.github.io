@@ -3,33 +3,13 @@ layout: post
 title: Using Scatterplots and Models to Understand the Diamond Market
 image: fbfa61f67413c8e2805c507a14b38c24c5373265.png
 comments: true
+redirect_from: "/2014/01/19/visualization-series-the-scatterplot-or-how-to-use-data-so-you-dont-get-ripped-off/"
 ---
 
 ![ggpairs](/assets/img/fbfa61f67413c8e2805c507a14b38c24c5373265.png)
 
-My last post railed against the [bad visualizations that people often use to plot quantitive data by groups, and pitted pie charts, bar charts and dot plots against each other for two visualization tasks.  Dot plots came out on top](http://solomonmessing.wordpress.com/2012/03/04/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/).  I argued that this is because humans are good at the cognitive task of comparing position along a common scale, compared to making judgements about length, area, shading, direction, angle, volume, curvature, etc.---a finding credited to Cleveland and McGill.  I enjoyed writing it and people seemed to like it, so I'm continuing my visualization series with the scatterplot.
 
-A scatterplot is a two-dimensional plane on which we record the intersection of two measurements for a set of case items--usually two quantitative variables.  Just as humans are good at comparing position along a common scale in one dimension, our visual capabilities allow us to make fast, accurate judgements and recognize patterns when presented with a series of dots in two dimensions. This makes the scatterplot a valuable tool for data analysts both when exploring data and when communicating results to others. 
-
-In this post---part 1---I'll demonstrate various uses for scatterplots and outline some strategies to help make sure key patterns are not obscured by the scale or qualitative group-level differences in the data (e.g., the relationship between test scores and income differs for men and women). The motivation in this post is to come up with a model of diamond prices that you can use to help make sure you don't get ripped off, specified based on insight from exploratory scatterplots combined with (somewhat) informed speculation. In part 2, I'll discuss the use of panels aka facets aka small multiples to shed additional light on key patterns in the data, and local regression (loess) to examine central tendencies in the data. There are far fewer bad examples of this kind of visualization in the wild than the 3D barplots and pie charts mocked in my last post, though I was still able to find [a nice case of MS-Excel gridline abuse](http://www.windtesting.com/prototype%20power%20curve%20scatter%20plot.JPG) and [this lovely scatterplot + trend-line](http://www.showmethemath.com/Concepts_Explained/Scatter_Plot/homeworkScatterPlotAnswer.gif). 
-
-![](/assets/img/0e5cd98eb90fbc27e55e776f3303057ef7a35dcb.gif)
-
-The scatterplot has a richer history than the visualizations I wrote about in my last post.  The scatterplot's face forms a two-dimensional Cartesian coordinate system, and DeCartes' invention/discovery of this eponymous plane in around 1657 represents one of the most fundamental developments in science.  The Cartesian plane unites measurement, algebra, and geometry, depicting the relationship between variables (or functions) visually. Prior to the Cartesian plane, mathematics was divided into algebra and geometry, and the unification of the two made many new developments possible.  Of course, this includes modern map-making---cartography, but the [Cartesian plane was also an important step in the development of calculus](http://en.wikipedia.org/wiki/Cartesian_coordinate_system#History), without which very little of our modern would would be possible.
-
-
-## Diamonds
-
---------
-
-
-Indeed, the scatterplot is a powerful tool to help understand the relationship between two variables in your data set, and especially if that relationship is non-linear. Say you want to get a sense of whether you're getting ripped off when shopping for a diamond. You can use data on the price and characteristics of many diamonds to help figure out whether the price advertised for any given diamond is reasonable, and you can use scatterplots to help figure out how to model that data in a sensible way. Consider the important relationship between the price of a diamond and its carat weight (which corresponds to its size):
-
-![caratprice](/assets/img/635214c79e184de850272a4790deed0dc870a49a.png)
-
-A few things pop out right away.  We can see a non-linear relationship, and we can also see that the dispersion (variance) of the relationship also increases as carat size increases.  With just a quick look at a scatterplot of the data, we've learned two important things about the functional relationship between price and carat size. And, we also therefore learned that running a linear model on this data as-is would be a bad idea.
-
-[Before moving forward, I want provide a proper introduction to the diamonds data set, which I'm going to use for much of the rest of this post. Hadley's ggplot2 ships with a data set that records the carat size and the price of more than 50 thousand diamonds, from http://www.diamondse.info/ ]{style="line-height:1.5;"} collected in [in 2008](http://r.789695.n4.nabble.com/Year-of-data-collection-for-diamonds-dataset-in-ggplot2-td4506598.html)[, and if you're in the market for a diamond, exploring this data set can help you understand what's in store and at what price point. This is particularly useful because each diamond is unique in a way that isn't true of most manufactured products we are used to buying---you can't just plug a model number and look up the price on Amazon. And even an expert cannot cannot incorporate as much information about price as a picture of the entire market informed by data (though there's no substitute for qualitative expertise to make sure your diamond is what the retailer claims).]{style="line-height:1.5;"}
+If you've ever used R, you've probably seen references to the diamonds data set that ships with Hadley Wickham's ggplot2. If you're in the market for a diamond, exploring this data set can help you understand what's in store and at what price point. This is particularly useful because each diamond is unique in a way that isn't true of most manufactured products we are used to buying---you can't just plug a diamond's model number and look up the price on Amazon. And even an expert cannot cannot incorporate as much information about price as a picture of the entire market informed by data (though there's no substitute for qualitative expertise to make sure your diamond is what the retailer claims).
 
 But even if you're not looking to buy a diamond, the socioeconomic and political history of the diamond industry is fascinating. Diamonds birthed the mining industry in South Africa, which is now by far the largest and most advanced economy in Africa.  I worked a summer in Johannesburg, and can assure you that South Africa's cities look far more like L.A. and San Francisco than Lagos, Cairo, Mogadishu, Nairobi, or Rabat.  Diamonds drove the British and Dutch to colonize southern Africa in the first place, and have stoked conflicts ranging from the Boer Wars to modern day wars in Sierra Leone, Liberia, Côte d'Ivoire, Zimbabwe and the DRC, where the 200 carat Millennium Star diamond was sold to DeBeers at the height of the civil war in the 1990s.  Diamonds were one of the few assets that Jews could conceal from the Nazis during [the "Aryanization of Jewish property"](http://www.archives.gov/research/holocaust/articles-and-papers/turning-history-into-justice.html) in the 1930s, and the Congressional Research Service reports that [Al Qaeda has used conflict diamonds to skirt international sanctions and finance operations from the 1998 East Africa Bombings to the September 11th attacks](http://royce.house.gov/uploadedfiles/rl30751.pdf). 
 
@@ -53,7 +33,9 @@ By any reasonable measure, Frances Gerety succeeded---getting engaged means gett
 
 ![http://www.dvice.com/sites/dvice/files/diamonds-are-forever.jpg](/assets/img/f4eda42fe398a38837e01e97e4d07606a20171fe.jpg)
 
-Awe-inspiring and terrifying.  Let's open the data set.  The first thing you should consider doing is plotting key variables against each other using the ggpairs() function.  This function plots every variable against every other, pairwise.  For a data set with as many rows as the diamonds data, you may want to sample first otherwise things will take a long time to render.  Also, if your data set has more than about ten columns, there will be too many plotting windows, so subset on columns first.
+Awe-inspiring and terrifying.  Let's open the data set. 
+
+The first thing you should consider doing is plotting key variables against each other using the ggpairs() function.  This function plots every variable against every other, pairwise.  For a data set with as many rows as the diamonds data, you may want to sample first otherwise things will take a long time to render.  Also, if your data set has more than about ten columns, there will be too many plotting windows, so subset on columns first.
 
 ```r
 # Uncomment these lines and install if necessary:
@@ -69,9 +51,7 @@ diasamp = diamonds[sample(1:length(diamonds$price), 10000),]
 ggpairs(diasamp, params = c(shape = I('.'), outlier.shape = I('.')))
 ```
 
-* R style note: I started using the "=" operator over "<-" after reading [John Mount's post on the topic](http://www.win-vector.com/blog/2013/04/prefer-for-assignment-in-r/?utm_source=rss&utm_medium=rss&utm_campaign=prefer-for-assignment-in-r), which shows how using "<-" (but not "=") incorrectly can result in silent errors.  There are other good reasons: 1.) WordPress and R-Bloggers occasionally mangle "<-" thinking it is HTML code in ways unpredictable to me; 2.) "=" is what every other programming language uses; and 3.) (as pointed out by Alex Foss in comments) consider "foo<-3" --- did the author mean to assign foo to 3 or to compare foo to -3?  Plus, 4.) the way R interprets that expression depends on white space---and if I'm using an editor like Emacs or Sublime where I don't have a shortcut key assigned to "<-", I sometimes get the whitespace wrong.  This means spending extra time and brainpower on debugging, both of which are in short supply.  
-
-Anyway, here's the plot:
+here's the plot:
 
 ![ggpairs](/assets/img/5226c40443deaf7c082cd464531f4e27c0f151be.png)
 
@@ -129,6 +109,34 @@ p
 
 Nice, looks like an almost-linear relationship after applying the transformations above to get our variables on a nice scale.
 
+
+
+Indeed, the scatterplot is a powerful tool to help understand the relationship between two variables in your data set, and especially if that relationship is non-linear. Say you want to get a sense of whether you're getting ripped off when shopping for a diamond. You can use data on the price and characteristics of many diamonds to help figure out whether the price advertised for any given diamond is reasonable, and you can use scatterplots to help figure out how to model that data in a sensible way. Consider the important relationship between the price of a diamond and its carat weight (which corresponds to its size):
+
+![caratprice](/assets/img/635214c79e184de850272a4790deed0dc870a49a.png)
+
+A few things pop out right away.  We can see a non-linear relationship, and we can also see that the dispersion (variance) of the relationship also increases as carat size increases.  With just a quick look at a scatterplot of the data, we've learned two important things about the functional relationship between price and carat size. And, we also therefore learned that running a linear model on this data as-is would be a bad idea.
+
+
+
+My last post railed against the [bad visualizations that people often use to plot quantitive data by groups, and pitted pie charts, bar charts and dot plots against each other for two visualization tasks.  Dot plots came out on top](http://solomonmessing.wordpress.com/2012/03/04/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/).  I argued that this is because humans are good at the cognitive task of comparing position along a common scale, compared to making judgements about length, area, shading, direction, angle, volume, curvature, etc.---a finding credited to Cleveland and McGill.  I enjoyed writing it and people seemed to like it, so I'm continuing my visualization series with the scatterplot.
+
+A scatterplot is a two-dimensional plane on which we record the intersection of two measurements for a set of case items--usually two quantitative variables.  Just as humans are good at comparing position along a common scale in one dimension, our visual capabilities allow us to make fast, accurate judgements and recognize patterns when presented with a series of dots in two dimensions. This makes the scatterplot a valuable tool for data analysts both when exploring data and when communicating results to others. 
+
+In this post---part 1---I'll demonstrate various uses for scatterplots and outline some strategies to help make sure key patterns are not obscured by the scale or qualitative group-level differences in the data (e.g., the relationship between test scores and income differs for men and women). The motivation in this post is to come up with a model of diamond prices that you can use to help make sure you don't get ripped off, specified based on insight from exploratory scatterplots combined with (somewhat) informed speculation. In part 2, I'll discuss the use of panels aka facets aka small multiples to shed additional light on key patterns in the data, and local regression (loess) to examine central tendencies in the data. There are far fewer bad examples of this kind of visualization in the wild than the 3D barplots and pie charts mocked in my last post, though I was still able to find [a nice case of MS-Excel gridline abuse](http://www.windtesting.com/prototype%20power%20curve%20scatter%20plot.JPG) and [this lovely scatterplot + trend-line](http://www.showmethemath.com/Concepts_Explained/Scatter_Plot/homeworkScatterPlotAnswer.gif). 
+
+<!-- ![](/assets/img/0e5cd98eb90fbc27e55e776f3303057ef7a35dcb.gif) -->
+
+The scatterplot has a richer history than the visualizations I wrote about in my last post.  The scatterplot's face forms a two-dimensional Cartesian coordinate system, and DeCartes' invention/discovery of this eponymous plane in around 1657 represents one of the most fundamental developments in science.  The Cartesian plane unites measurement, algebra, and geometry, depicting the relationship between variables (or functions) visually. Prior to the Cartesian plane, mathematics was divided into algebra and geometry, and the unification of the two made many new developments possible.  Of course, this includes modern map-making---cartography, but the [Cartesian plane was also an important step in the development of calculus](http://en.wikipedia.org/wiki/Cartesian_coordinate_system#History), without which very little of our modern would would be possible.
+
+
+## Diamonds
+
+--------
+
+* R style note: I started using the "=" operator over "<-" after reading [John Mount's post on the topic](http://www.win-vector.com/blog/2013/04/prefer-for-assignment-in-r/?utm_source=rss&utm_medium=rss&utm_campaign=prefer-for-assignment-in-r), which shows how using "<-" (but not "=") incorrectly can result in silent errors.  There are other good reasons: 1.) WordPress and R-Bloggers occasionally mangle "<-" thinking it is HTML code in ways unpredictable to me; 2.) "=" is what every other programming language uses; and 3.) (as pointed out by Alex Foss in comments) consider "foo<-3" --- did the author mean to assign foo to 3 or to compare foo to -3?  Plus, 4.) the way R interprets that expression depends on white space---and if I'm using an editor like Emacs or Sublime where I don't have a shortcut key assigned to "<-", I sometimes get the whitespace wrong.  This means spending extra time and brainpower on debugging, both of which are in short supply.  
+
+Anyway, 
 ## Overplotting
 ------------
 

@@ -4,6 +4,8 @@ permalink: /publications/
 title: publications
 description: 
 years: [1956, 1950, 1935, 1905]
+redirect_from: "/research/"
+
 ---
 [**Estimating Heterogeneous Treatment Effects and the Effects of
 Heterogeneous Treatments with Ensemble

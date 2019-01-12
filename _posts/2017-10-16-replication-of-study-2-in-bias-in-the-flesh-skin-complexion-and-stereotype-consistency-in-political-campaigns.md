@@ -2,6 +2,7 @@
 layout: post
 title: Replication of "Bias in the Flesh"
 image: a0415aa41faee2db8452e14712ae9505f7a96f0a.png
+redirect_from: "2017/10/16/replication-of-study-2-in-bias-in-the-flesh-skin-complexion-and-stereotype-consistency-in-political-campaigns/"
 ---
 **Replication of Study 2 in \"Bias in the Flesh: Skin Complexion and Stereotype Consistency in Political Campaigns\"**
 
