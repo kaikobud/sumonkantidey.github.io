@@ -4,6 +4,8 @@ title: Know your data - Pricing diamonds using scatterplots and predictive model
 image: fbfa61f67413c8e2805c507a14b38c24c5373265.png
 comments: true
 redirect_from: "/2014/01/19/visualization-series-the-scatterplot-or-how-to-use-data-so-you-dont-get-ripped-off/"
+redirect_from: "/2019/01/12/Know-your-data---Pricing-diamonds-using-scatterplots-and-predictive-models/"
+
 ---
 
 ![ggpairs](/assets/img/fbfa61f67413c8e2805c507a14b38c24c5373265.png)
@@ -83,7 +85,7 @@ What we really care about here is price, so let's focus on that.  We can see wh
 
 On the demand side, customers in the market for a less expensive, smaller diamond are probably more sensitive to price than more well-to-do buyers. Many less-than-one-carat customers would surely never buy a diamond were it not for the social norm of presenting one when proposing.  And, there are *fewer* consumers who can afford a diamond larger than one carat.  Hence, we shouldn't expect the market for bigger diamonds to be as competitive as that for smaller ones, so it makes sense that the variance as well as the price would increase with carat size.
 
-<!-- Often the distribution of any monetary variable will be highly skewed and vary over orders of magnitude. This can result from path-dependence (e.g., the rich get richer) and/or the multiplicitive processes (e.g., year on year inflation) that produce the ultimate price/dollar amount. Hence, it's a good idea to look into compressing any such variable by putting it on a log scale (for more take a look at [this guest post on Tal Galili's blog](http://www.r-statistics.com/2013/05/log-transformations-for-skewed-and-wide-distributions-from-practical-data-science-with-r/)).
+Often the distribution of any monetary variable will be highly skewed and vary over orders of magnitude. This can result from path-dependence (e.g., the rich get richer) and/or the multiplicitive processes (e.g., year on year inflation) that produce the ultimate price/dollar amount. Hence, it's a good idea to look into compressing any such variable by putting it on a log scale (for more take a look at [this guest post on Tal Galili's blog](http://www.r-statistics.com/2013/05/log-transformations-for-skewed-and-wide-distributions-from-practical-data-science-with-r/)).
 
 ```r
 p = qplot(price, data=diamonds, binwidth=100) +
@@ -165,7 +167,7 @@ p
 
 ![](/assets/img/8f93ee4c395a7382a2893b01d640b65e7006ebe9.png)
 
-This gives us a better sense of how dense and sparse our data is at key places.
+<!-- This gives us a better sense of how dense and sparse our data is at key places.
 
 ## Using Color to Understand Qualitative Factors
 ---------------------------------------------
