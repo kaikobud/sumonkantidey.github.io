@@ -52,7 +52,7 @@ The Atlantic's Jay Epstein argues that this campaign gave birth to modern deman
 
 By any reasonable measure, Frances Gerety succeeded---getting engaged means getting a diamond ring in America. Can you think of a movie where two people get engaged without a diamond ring? When you announce your engagement on Facebook, what icon does the site display?  Still think this marketing campaign might not be the most successful mass-persuasion effort in history?  I present to you a James Bond film, whose title bears the diamond cartel's trademark:
 
-![http://www.dvice.com/sites/dvice/files/diamonds-are-forever.jpg](/assets/img/f4eda42fe398a38837e01e97e4d07606a20171fe.jpg)
+![](/assets/img/f4eda42fe398a38837e01e97e4d07606a20171fe.jpg)
 
 Awe-inspiring and terrifying.  Let's open the data set.  
 
