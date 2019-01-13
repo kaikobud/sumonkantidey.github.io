@@ -167,7 +167,7 @@ p
 
 ![](/assets/img/8f93ee4c395a7382a2893b01d640b65e7006ebe9.png)
 
-<!-- This gives us a better sense of how dense and sparse our data is at key places.
+This gives us a better sense of how dense and sparse our data is at key places.
 
 ## Using Color to Understand Qualitative Factors
 ---------------------------------------------
@@ -323,7 +323,7 @@ E(log(y) \mid \mathbf{X} = \mathbf{x}) &= E(\mathbf{X}\beta + \epsilon)\\
 	&= exp(\mathbf{X}\hat\beta) \times exp( \frac{\hat\sigma^2}{2} ) \\
 \end{align*}
 $$
-
+<!-- 
 To dig further into that last step, have a look at the [Wikipedia page on log-normal distributed variables](http://en.wikipedia.org/wiki/Log-normal_distribution#Arithmetic_moments).
 Thanks to [Miguel](https://sites.google.com/site/miguelgodinhomatos/) for catching this.
 Let's take a look at an example from Blue Nile. I'll use the full model, m4.
