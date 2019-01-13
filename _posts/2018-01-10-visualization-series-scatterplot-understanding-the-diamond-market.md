@@ -110,7 +110,7 @@ Let's re-plot our data, but now let's put price on a log10 scale:
 p = qplot(carat, price, data=diamonds) +
 scale_y_continuous(trans=log10_trans() ) +
 theme_bw() +
-ggtitle('Price (log10) by Cubed-Root of Carat')
+ggtitle('Price (log10) by Carat')
 p
 ```
 
@@ -320,10 +320,11 @@ E(log(y) \mid \mathbf{X} = \mathbf{x}) &= E(\mathbf{X}\beta + \epsilon)\\
 	E(y \mid \mathbf{X} = \mathbf{x}) &= E( exp( \mathbf{X}\beta + \epsilon ) )\\
 	&= E( exp( \mathbf{X}\beta ) \times exp( \epsilon ) ) \\
 	&= E( exp( \mathbf{X}\beta ) ) \times E( exp( \epsilon ) ) \\
-	&= exp(\mathbf{X}\hat\beta) \times exp( \frac{\hat\sigma^2}{2} ) \\
+	&= exp(\mathbf{X}\hat\beta) \times exp( \frac{\hat\sigma^2}{2} ) 
 \end{align*}
 $$
-<!-- 
+
+
 To dig further into that last step, have a look at the [Wikipedia page on log-normal distributed variables](http://en.wikipedia.org/wiki/Log-normal_distribution#Arithmetic_moments).
 Thanks to [Miguel](https://sites.google.com/site/miguelgodinhomatos/) for catching this.
 Let's take a look at an example from Blue Nile. I'll use the full model, m4.
@@ -377,4 +378,3 @@ Don't make that mistake.
 That concludes part I of this series on scatterplots.  Part II will illustrate the advantages of using facets/panels/small multiples, and show how tools to fit trendlines including linear regression and local regression (loess) can help yield additional insight about your data. 
 
 You can also learn more about [exploratory data analysis via this Udacity course taught by my colleagues Dean Eckles and Moira Burke, and Chris Saden](https://www.udacity.com/course/ud651), which will be coming out in the next few weeks.
- -->
