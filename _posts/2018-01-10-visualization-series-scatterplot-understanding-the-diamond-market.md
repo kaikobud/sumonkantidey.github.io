@@ -32,6 +32,7 @@ The scatterplot is a powerful tool to help understand the relationship between v
 A few things pop out right away.  We can see a non-linear relationship, and we can also see that the dispersion (variance) of the relationship also increases as carat size increases. With just a quick look at a scatterplot of the data, we've learned two important things about the functional relationship between price and carat size. And, we also therefore learned that running a linear model on this data as-is would be a bad idea.
 
 ## Diamonds
+<a name="Diamonds"></a>
 
 If you've ever used R, you've probably seen references to the diamonds data set that ships with Hadley Wickham's ggplot2. It records the carat size and the price of more than 50 thousand diamonds, from http://www.diamondse.info/ collected in [in 2008](http://r.789695.n4.nabble.com/Year-of-data-collection-for-diamonds-dataset-in-ggplot2-td4506598.html), and if you're in the market for a diamond, exploring this data set can help you understand what's in store and at what price point. This is particularly useful because each diamond is unique in a way that isn't true of most manufactured products we are used to buying---you can't just plug a model number and look up the price on Amazon. And even an expert cannot cannot incorporate as much information about price as a picture of the entire market informed by data (though there's no substitute for qualitative expertise to make sure your diamond is what the retailer claims).
 
