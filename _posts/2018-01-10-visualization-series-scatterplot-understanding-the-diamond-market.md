@@ -5,6 +5,7 @@ image: fbfa61f67413c8e2805c507a14b38c24c5373265.png
 comments: true
 redirect_from: "/2014/01/19/visualization-series-the-scatterplot-or-how-to-use-data-so-you-dont-get-ripped-off/"
 redirect_from: "/2019/01/12/Know-your-data---Pricing-diamonds-using-scatterplots-and-predictive-models/"
+redirect_from: "/blog/2014/visualization-series-the-scatterplot-and-understanding-the-diamond-market/"
 
 ---
 
