@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: <strong>Solomon Messing</strong>
-description: Research Scientist, Manager.
+description: Principal Research Scientist.
 
 profile:
   align: right
