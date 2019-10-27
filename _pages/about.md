@@ -7,7 +7,7 @@ title: <strong>Solomon Messing</strong>
 profile:
   align: right
   image: ProfilePic.jpg
-  address: D.C.
+  address: >
     
 news: true
 social: true
