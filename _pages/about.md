@@ -6,7 +6,7 @@ title: <strong>Solomon Messing</strong>
 
 profile:
   align: right
-  image: ProfilePic.jpg
+  image: cartoonpic.png
   address: >
     
 news: true
