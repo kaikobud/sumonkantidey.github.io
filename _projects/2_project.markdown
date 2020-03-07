@@ -1,64 +1,124 @@
 ---
 layout: page
-title: Out for Justice
-description: ML & decision support to optimize patrols
-img: /assets/img/OutForJustice.jpg
+title: Projecting Confidence
+description: How the Probabilistic Horse Race Demobilizes the Public
+img: /assets/img/elliott-stallion-105205-unsplash.jpg
 ---
 
-<iframe src="https://player.vimeo.com/video/111994655" width="640" height="330" frameborder="0" allowfullscreen></iframe>
-(forked from the team's original writeup [here](http://seanjtaylor.github.io/out-for-justice/))
+Inspired by Donald Trump's surprise victory over Hillary Clinton in the 2016 general election, [Sean Westwood](https://www.dartmouth.edu/~seanjwestwood/), [Yphtach Lelkes](http://ylelkes.com/) and I set out to interrogate the question of whether elecion forecasts---particularly probablistic forecasts---might create a sense of inevitability, and ultimately lead people to stay home on election day. 
 
-We build Out for Justice in 24 hours at the [Bayes Impact](http://www.bayesimpact.org/) Hackathon, using data from the San Francisco Police Department. Out For Justice is an an interpretable, customizable and interactive decision support system to help SFPD optimize police patrols. Out for Justice allows the user to set their own objectives and isn't simply a black box algorithm that outputs a solution.
+Clinton herself was quoted in [New York Magazine](http://nymag.com/daily/intelligencer/2017/05/hillary-clinton-life-after-election.html?mid=nymag_press) after the election:
 
-The idea is simple: minimize response time to crime--or 911 at least calls. But different kinds of crime happen in different places in San Francisco. And police cars/patrols are a limited resource. 
+> I had people literally seeking absolution... ‘_I’m so sorry I didn’t vote. I didn’t think you needed me._’ I don’t know how we’ll ever calculate how many people thought it was in the bag, because the percentages kept being thrown at people — ‘_Oh, she has an 88 percent chance to win!_’
 
-Out for Justice allows the user to evaluate potential positions for patrol cars--if someone calls in a violent crime and my cars were set up like this, how long would it take to respond? It allows you to prioritize your response to different types of crimes using custom weights. Responding a minute later to investigate a broken window may be much less costly than arriving late on the scene of a crime in progress.
+**Is it plausible that forecasting could have affected the election?**
 
-Finally, Out for Justice allows users to set car positions. Based on the custom weights and number of patrol cars, Out for Justice optimizes patrol car placement using an algorithm we call MetroPolice-Hastings. 
+For this phenomena to affect an election, it must: 
+1. be visible in the media so it reaches potential voters, 
+2. depress turnout, and
+3. affect one side more than the other. In the case of 2016, that means affecting Clinton's supporters (and/or Clinton campaigners) more than Trump's. 
 
-**HOW DOES IT WORK?**
+We found evidence for all of the above. First, witness the rise of forecasts since 2008, when FiveThirtyEight first came on the scene: 
 
-Out for Justice is made of three components. First, we science some data. We take two years of SFPD 911 call data and use it to predict where future 911 calls are likely to come from. Second, real map data from Open Street Maps is used to simulate travel times from SF patrol cars to a call. Second, we optimize stuff. We take map data from Open Street Maps and use it to simulate travel times from SF patrol cars to a call. Finally, a simple interface makes interacting and drawing insights from Out for Justice easy.
+![](/assets/img/forecast_google_news.png) 
 
-**BOOSTING FOR JUSTICE**
+What's more, there is good evidence that one side will be more affected. Our research (see results below) suggests that _candidate who is ahead in the polls is more affected_ by probablistic forecasts. In 2016, that was Hillary. 
 
-The beating heart of Out for Justice is some machine learning. We took a data set of two years of 911 calls in San Francisco that had attached latitude/longitude coordinates, discretized the city into a grid and trained boosted Poisson regression trees to predict the probability of a 911 call at each position. This makes some strong assumptions about the underlying process that are wrong, but hey, it's still useful and we only had 24 hours! After we trained the trees they could, in principle, predict at any latitude/longitude location in SF so we predicted Poisson arrival rates for every node in street graph that we built using Open Street Maps.
+And irrespective of 2016, it's outlets with a _left-leaning audience_ that publish and cover election forecasts. The websites that present their poll aggregation results in terms of probabilities have left-leaning (negative) social media audiences---only realclearpolitics.com, which doesn’t emphasize win-probabilities, has a conservative audience:
 
-We tried several other approaches including 2d kernel density smoothing but found that the boosted trees were by far the best performing. We used the R package gbm to do the training.
+![half](/assets/img/bma_science_alignment.png)
 
-For the initial project we focused on predicting three broad categories of crime: violent crimes (assaults, arson and forcible sex offenses), property crimes (burglary, vandalism, larceny and vehicle theft) and substance-based crimes (drunkeness or drug/narcotic). Our exploratory analyses also told us that it was a good idea to split the data by time into 3 epochs: nighttime (2AM-10AM), day time (10AM-6PM) and evening time aka party time (6PM-2AM).
+These data come from the average self-reported ideology of people who share links to various sites hosting poll-aggregators on Facebook, data that come from [this paper](http://science.sciencemag.org/content/early/2015/05/06/science.aaa1160.full)’s [replication materials](http://dx.doi.org/10.7910/DVN/LDJ7MS). 
 
-Our analyses find some interesting patterns in the data. All the plots are done using the excellent R package ggmaps. There are definitely weekend/weekday patterns as well as daily cycles in the day (see below). The models and data are up in the GitHub directory above if you want to play with them!
+When you look at the balance of coverage of probabilistic forecasts on major television broadcasts, there is more coverage on MSNBC, which has a more liberal audience.
 
-![](/assets/img/predcrimes.jpg)
-
-**COMPUTING THE COSTS**
-
-So now we have probabilities of calls occuring at each node of the graph that is San Francisco. We can now take a set of patrol cars located at various points in the graph and calculate a score for that position, the score we use in the current version is an expected travel time given the way that calls are expected to come in both spatially (where does the call come from?) and temporally (how likely is a particular type of call?). The key innovation is the ability for the user to specify in the UI which types of calls are really important to respond to quickly and which ones are the kind where a minute's delay may not hurt things very much.
-
-The current beta version only allows for random initial placements of a user-specified number of patrol cars, the easiest next feature to add is the ability to place the cars manually.
+![half](/assets/img/msnbc_mentions.png)
 
 
-**METROPOLICE-HASTINGS OPTIMIZATION**
+**How much influence do forecasters really have?**
 
-<img style="float: right;" src="/assets/img/napkin.jpg" width="250">
-The final core component of Out For Justice is an optimization algorithm. Given an existing car placement, it is natural to ask "can we do better?" We use a version of the Metropolis-Hastings algorithm to compute the answer to this question: first, we choose a random car to move a random distance on the graph. 
+It's increadibly difficult to tease out when one media outlet is influencing another. However, a freak event in 2018 allows us to get some traction on this question, and suggests that FiveThirtyEight's 2018 coverage was highly influential.  
 
+After FiveThirtyEight's real-time forecast suddenely moved the the GOP's odds of taking the House from single digits to about 60% at around 8:15PM, PredictIt's odds on the GOP rose above 50-50, & _U.S. government bond yields rose 2-4 basis points._  FiveThirtyEight then altered it's prediction system and the markets calmed down. 
 
-To add stochasticity to this algorithm with a small probability we keep this move no matter what. With the complementary probability we do something smarter: we ask whether this move improves the weighted response time. If this move improves the response time by a meaningful amount, we keep it. If it doesn't, we revert it and try something else. This algorithm has a few parameters to tune, namely the probability of keeping any move and the threshold of improvement that we require to count the move as a success. The current version makes no pretense of having these parameters set optimally, though we did play with them somewhat.
+![](/assets/img/538-markets.jpg)
 
+This spike seems to have occurred because a number of big, [Republican-dominated districts started reporting returns before those that went toward Democrats](https://fivethirtyeight.com/live-blog/2018-election-results-coverage/#3495) and because it was making inferences from partial vote counts:
 
-**THE OUT FOR JUSTICE TEAM**
+![half](/assets/img/538realtimepolling.jpg)
 
-Ta Virot Chiraphadhanakul [@tvirot](https://twitter.com/tvirot)
+This was [first reported by Colby Smith & Brian Greeley of FT.com](https://ftalphaville.ft.com/2018/11/07/1541617447000/Debt-markets-let-us-know-what-they-think-about-Republicans-last-night/). They report that because markets expected to see more inflation under a Republican House (high spending, low taxes) the U.S. Bond yield rose. 
 
-Sean J. Taylor [@seanjtaylor](https://twitter.com/seanjtaylor)
+Was this just a correlation? Possibly, but there was pretty much nothing else happening in the U.S., and it was like 1 am in Europe, as pointed out in the FT.com piece above.
 
-Alex Peysakhovich [@alex_peys](https://twitter.com/alex_peys)
-
-Solomon Messing [@SolomonMg](https://twitter.com/SolomonMg)
-
-![half](/assets/img/Hackathon_team.jpg)
+Josh Tucker suggested that [538 might be driving prediction markets](http://themonkeycage.org/2012/10/convergence-between-polls-and-prediction-markets-in-us-presidential-election/) back in 2012 in a Monkey Cage blogpost. 
 
 
-UPDATE: Nice coverage on [Mashable](https://mashable.com/2014/11/17/data-hackathon/#EHDv8ugj7aqN) of the entire hackathon! Check out the winning hackathon project.
+**Our research on forecasting and perception**
+
+[Our research](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3117054) shows that probablistic election forecasts make a race look less competitive. Participants in a national probability survey-experiment were substantially more certain that one candidate would win a hypothetical race after seeing a probablistic forecast than after seeing the equivalent vote share estimate and margin of error. This is a big effect---those are confidence intervals not standard errors, with p-values below $$10^{-11}$$. 
+
+![normal](/assets/img/certaintyc.png)
+
+
+**Why do people do this?**
+
+More research is needed here but we do have some leads. First, small differences in the election metric most familiar to the public—vote share estimates—generally correspond to very large differences in the probability of a candidate’s chance of victory. 
+
+Andy Gelman referenced this in passing in a [2012 blogpost](https://andrewgelman.com/2012/10/22/is-it-meaningful-to-talk-about-a-probability-of-65-7-that-obama-will-win-the-election/) questioning the decimal precision (0.1 percent) that 538 used to communicate its forecast on its website: 
+
+> That’s right: a change in 0.1 of win probability corresponds to a 0.004 percentage point share of the two-party vote. I can’t see that it can possibly make sense to imagine an election forecast with that level of precision...
+
+Second, people sometimes confuse probabilistic forecasts with vote share projections, and incorrectly conclude that a candidate is projected to say win 85% percent of the vote, rather than to having an 85% chance of winning the election. About 1 in 10 peope did this in our experiment. 
+
+As [Joshua Benton pointed out in a tweet](https://twitter.com/jbenton/status/1059898288139354112), TalkingPointsMemo.com [made this very mistake](https://talkingpointsmemo.com/news/issa-calls-race-early):
+
+![](/assets/img/TPMCorrection.jpg)
+
+Finally, people tend to think in qualitative terms about the probability of events {%cite sunstein2002probability%}, {%cite keren1991calibration%}. An 85% likelihood that something will happen means it's going to happen. These studies may help explain why after the 2016 election, so many criticized forecasters for “getting it wrong” (see [this](https://www.nytimes.com/2016/11/10/technology/the-data-said-clinton-would-win-why-you-shouldnt-have-believed-it.html
+) and [this](http://www.slate.com/articles/news_and_politics/politics/2016/01/nate_silver_said_donald_trump_had_no_shot_where_did_he_go_wrong.html)).
+
+
+**What about voting?**
+
+Perhaps most critically, we show that probabilistic forecasts showing more of a blowout can lower voting. In Study 1, we find limited evidence of this based on self reports. In Study 2, we show that when participants are faced with incentives designed to simulate real world voting, they are less likely to vote when probabilistic forecasts show higher odds of one candidate winning. Yet they are not responsive to changes in vote share.
+
+![normal](/assets/img/FT_18.01.03_prob_vote.png)
+
+**Could this actually affect real world voting?**
+
+Consider 2016---an unusually high number of Democrats thought the leading candidate would *win by quite a bit*:
+
+![normal](/assets/img/anes_turnout_closerace_mc_tall.png)
+
+And people who say the leading candidate will *win by quite a bit* in pre-election polling are about three percentage points less likely to say they voted after the election than people who say it’s a close race. That’s after controlling for election year, prior turnout, and party identification. 
+
+![normal](/assets/img/closerace_vote_anes.png)
+
+The data here are from the [American National Election Study (ANES)](https://electionstudies.org) and go back to 1952.
+
+
+Past social science research also provides evidence that the perception of a close race boosts turnout. Some of the best evidence comes from work that analyzes the effects of releasing exit polling results before voting ends, which clearly removes uncertainty. Work examining the effects of East Coast television networks’ “early calls” for one candidate or another on West Coast turnout generally find small but substantively meaningful effects, despite the fact that these calls occur late on election day {% cite carpini1984scooping %}, {% cite Sudman:1986wu %}. Similar work exploiting voting reform as a natural experiment shows a full 12 percentage point decrease in turnout in the French overseas territories that voted after exit polls were released {% cite Morton201565 %}. These designs are not confounded with the tendency for campaigns to invest more in campaigns in competitive races.
+
+Researchers consistently find robust correlations between tighter elections and higher turnout [see {% cite geys2006explaining %}; {% cite cancela2016explaining %} for reviews]. Furthermore, {% cite nicholson1997prior %} provide evidence from statistical models that prior election returns also explain turnout above and beyond campaign spending, particularly when good polling data is unavailable. 
+
+Field experiments provide additional evidence that perceptions of higher electoral competition increases turnout. This work finds substantive effects on turnout when polling results showing a closer race are delivered via telephone [among those who were reached, {% cite biggers2017experimental %}] but null results when relying on postcards to deliver closeness messages [for which it’s not possible to verify the treatment was actually read, {% cite gerber2017one %}; {% cite biggers2017experimental%}. Finally, one study conducted in the weeks leading up to the 2012 presidential election found higher rates of self-reported, post-election turnout when delivering ostensible polling results showing Obama neck-and-neck with Romney [which was not consistent with the extant polling data showing a comfortable Obama lead, {% cite Vannette:2014vk %}].
+
+**Could this affect politicians as well?**
+
+Candidates’ perceptions of the closeness of an election can affect campaigning and representation {%cite enos2015campaign%}, {%cite Mutz:1997wy%}. 
+
+These perceptions can also shape policy decisions—-for example, prior to the 2016 election, the Obama administration’s confidence in a Clinton victory was reportedly a factor in the muted response to [Russian intervention in the election](https://www.washingtonpost.com/graphics/2017/world/national-security/obama-putin-election-hacking/). 
+
+And former FBI Director James Comey, because of his confidence in a Clinton victory, said he felt that it was his duty to write a letter to Congress on October 28 saying he was reopening the investigation into her emails. Comey explained his actions based on his certain belief in a Clinton win: ''[S]he's gonna be elected president, and if I hide this from the American people, she'll be illegitimate the moment she's elected, the moment this comes out'' {%cite keneally_2018%}. Nate Silver at one point said ''[the Comey letter probably cost Clinton the Election](https://fivethirtyeight.com/features/the-comey-letter-probably-cost-clinton-the-election/).'' 
+
+![](/assets/img/ComeyABCCNNresize.jpg)
+
+**Media coverage**
+[Washington Post](https://www.washingtonpost.com/news/politics/wp/2018/02/06/clintons-achilles-heel-in-2016-may-have-been-overconfidence/?utm_term=.619133ce9312), [FiveThirthyEight’s Politics Podcast](https://fivethirtyeight.com/features/politics-podcast-whats-so-wrong-with-nancy-pelosi/), [New York Magazine](http://nymag.com/intelligencer/2018/02/americans-dont-understand-election-probabilities.html?gtm=bottom&gtm=bottom), [Political Wire](https://politicalwire.com/2018/02/06/election-forecasts-lower-voter-turnout/).
+
+
+**References**
+{% bibliography --cited %}
+
+
