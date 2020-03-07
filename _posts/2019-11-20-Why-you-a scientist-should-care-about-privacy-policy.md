@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why you, a scientist, should care about privacy policy
-image: /assets/img/datapriv.jpg
+image: datapriv.jpg
 ---
 
 <!-- ![](https://cdn-images-1.medium.com/max/1600/1*_COjgiypANy8byDnexEFIQ.png)() -->
