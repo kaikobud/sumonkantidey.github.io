@@ -399,7 +399,7 @@ top: -5%;*/ width: 500px; }
 .project .thumbnail a span p { color: #e8e8e8; }
 .project .thumbnail a:hover span { display: block; }
 
-.profile img { box-shadow: 0 0 2px #828282; width: 130px; }
+.profile img { box-shadow: 0 0 2px #828282; width: 100%; }
 
 .address { font-family: monospace; }
 .address p { margin: 0; }
