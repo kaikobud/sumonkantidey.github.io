@@ -51,14 +51,15 @@
         </label>
         <div class="trigger">
           <!-- About -->
-          <a class="page-link" href="/">about</a>
-          <!-- CV -->
-          <a class="page-link" href="/assets/pdf/CV.pdf">CV</a>
+          <a class="page-link" href="/">About</a>
           <!-- Blog -->
-          <a class="page-link" href="/blog/">blog</a>
+          <a class="page-link" href="/blog/">Posts</a>
           <!-- Pages -->
           <a class="page-link" href="/projects/">projects</a>
-          <a class="page-link" href="/publications/">publications</a>
+          <!-- CV -->
+          <a class="page-link" href="/assets/pdf/Sumon_Kanti_Dey_Resume.pdf">Resume</a>
+          <!-- <a class="page-link" href="/publications/">publications</a>
+        <a class="page-link" href="/teaching/">teaching</a> -->
         </div>
       </nav>
 
@@ -89,11 +90,12 @@
 
           </p> -->
           <p>
-            In this tutorial, I have tried to describe the basic limitation of one-hot encoding and n-grams feature for finding text similarity.
+            In this tutorial, I have tried to describe the basic limitation of one-hot encoding and n-grams feature for
+            finding text similarity.
           </p>
           <h4>one hot encoding</h4>
           <p>
-            For text encoding, there are few techniques available one-hot encoding is one of them.  
+            For text encoding, there are few techniques available one-hot encoding is one of them.
             one hot encoding helps to map a word in one-hot vector.
             Let's think about two similar sentences <i>" she was a beautiful woman"</i> and
             <i>"she was a wonderful woman"</i>.
@@ -121,14 +123,14 @@
             the dimensions and can not make any projection along with other dimensions. That means <i>"beautiful"</i>
             and <i>"wonderful"</i> this two words
             considered as different as rest of the other words, which is not true. If Vocabulary size increase it will
-            make a huge sparse matrix which will consume more memory and space. 
+            make a huge sparse matrix which will consume more memory and space.
           </p>
           <h4>N-grams</h4>
 
           <p>
             n-grams can be used to represent the relation between words in a document. n-grams help to measure the
             number of co-occurring words within a window. For example, for the sentence <i>"she is a wonderful
-            woman"</i> (if N=2 known as bigrams) then the n-grams would be
+              woman"</i> (if N=2 known as bigrams) then the n-grams would be
           </p>
           <ul style="list-style-type:disc">
             <li>she is</li>
