@@ -401,7 +401,7 @@ footer a:hover { color: #B509AC; }
 
 .post-link { display: block; font-size: 42px; }
 
-.project { box-sizing: border-box; float: left; height: 250px; padding: 20px; vertical-align: middle; width: 45%; }
+.project { box-sizing: border-box; height: 250px; padding: 20px; vertical-align: middle; width: 100%; }
 .project .thumbnail { overflow: hidden; /*height: 200px;*/ height: 100%; width: 100%; }
 .project .thumbnail img { height: auto; position: relative; /*left: -25%;
 top: -5%;*/ width: 500px; }
